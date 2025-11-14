@@ -1,6 +1,10 @@
 # Transport et Bois de Chauffage JSGC - Site Vitrine
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/44d86584-ffc7-4bc3-b27e-0ed3560f5bee/deploy-status)](https://app.netlify.com/projects/jsgc/deploys)
+
 Site web professionnel pour l'entreprise **Transport et Bois de Chauffage JSGC**, située à Ferland-et-Boilleau, Québec.
+
+🌐 **Site en ligne** : [https://jsgc.netlify.app](https://jsgc.netlify.app)
 
 ## 🌲 À propos
 
