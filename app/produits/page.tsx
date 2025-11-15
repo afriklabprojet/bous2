@@ -19,9 +19,13 @@ export default function ProductsPage() {
         language === "fr"
           ? "🔥 Haute densité énergétique (4700 kcal/kg)"
           : "🔥 High energy density (4700 kcal/kg)",
-        language === "fr" ? "⏱️ Combustion lente (8-10h)" : "⏱️ Slow burning (8-10h)",
+        language === "fr"
+          ? "⏱️ Combustion lente (8-10h)"
+          : "⏱️ Slow burning (8-10h)",
         language === "fr" ? "🌡️ Température élevée" : "🌡️ High temperature",
-        language === "fr" ? "✨ Faible taux de cendres (1%)" : "✨ Low ash content (1%)",
+        language === "fr"
+          ? "✨ Faible taux de cendres (1%)"
+          : "✨ Low ash content (1%)",
         language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
       ],
       pricing: {
@@ -38,10 +42,16 @@ export default function ProductsPage() {
           ? "Bois franc réputé pour son odeur agréable et son écorce blanche distinctive. Parfait pour une ambiance chaleureuse. Séchage naturel 12-18 mois."
           : "Hardwood known for its pleasant scent and distinctive white bark. Perfect for a warm atmosphere. Natural drying 12-18 months.",
       features: [
-        language === "fr" ? "🌲 Odeur agréable caractéristique" : "🌲 Characteristic pleasant scent",
-        language === "fr" ? "🔥 Flamme vive et belle" : "🔥 Bright beautiful flame",
+        language === "fr"
+          ? "🌲 Odeur agréable caractéristique"
+          : "🌲 Characteristic pleasant scent",
+        language === "fr"
+          ? "🔥 Flamme vive et belle"
+          : "🔥 Bright beautiful flame",
         language === "fr" ? "💨 Séchage rapide" : "💨 Quick drying",
-        language === "fr" ? "🏡 Idéal résidentiel et foyer" : "🏡 Ideal for residential & fireplace",
+        language === "fr"
+          ? "🏡 Idéal résidentiel et foyer"
+          : "🏡 Ideal for residential & fireplace",
         language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
       ],
       pricing: {
@@ -51,7 +61,8 @@ export default function ProductsPage() {
       },
     },
     {
-      name: language === "fr" ? "Bois Mélangé Économique" : "Economy Mixed Wood",
+      name:
+        language === "fr" ? "Bois Mélangé Économique" : "Economy Mixed Wood",
       image: "/images/mixed-wood.svg",
       description:
         language === "fr"
@@ -64,8 +75,12 @@ export default function ProductsPage() {
         language === "fr"
           ? "🔥 Performance constante (4200 kcal/kg)"
           : "🔥 Consistent performance (4200 kcal/kg)",
-        language === "fr" ? "📦 Grande polyvalence d'usage" : "📦 Great versatility",
-        language === "fr" ? "✅ Toujours disponible en stock" : "✅ Always in stock",
+        language === "fr"
+          ? "📦 Grande polyvalence d'usage"
+          : "📦 Great versatility",
+        language === "fr"
+          ? "✅ Toujours disponible en stock"
+          : "✅ Always in stock",
         language === "fr" ? "📏 Bûches 14-18 pouces" : "📏 14-18 inch logs",
       ],
       pricing: {
@@ -76,16 +91,22 @@ export default function ProductsPage() {
     },
     {
       name: language === "fr" ? "Bois de Merisier" : "Yellow Birch Wood",
-      image: "/images/maple-wood.svg",
+      image: "/images/cherry-wood.svg",
       description:
         language === "fr"
           ? "Bois dur noble québécois, excellent pouvoir calorifique. Combustion lente et régulière. Prisé pour son odeur subtile et sa qualité exceptionnelle."
           : "Noble Quebec hardwood, excellent heating value. Slow and steady burn. Prized for subtle scent and exceptional quality.",
       features: [
         language === "fr" ? "⭐ Qualité supérieure" : "⭐ Superior quality",
-        language === "fr" ? "🔥 Combustion régulière (7-9h)" : "🔥 Steady burn (7-9h)",
-        language === "fr" ? "🌡️ Chaleur intense et durable" : "🌡️ Intense lasting heat",
-        language === "fr" ? "🌿 Odeur douce et agréable" : "🌿 Sweet pleasant scent",
+        language === "fr"
+          ? "🔥 Combustion régulière (7-9h)"
+          : "🔥 Steady burn (7-9h)",
+        language === "fr"
+          ? "🌡️ Chaleur intense et durable"
+          : "🌡️ Intense lasting heat",
+        language === "fr"
+          ? "🌿 Odeur douce et agréable"
+          : "🌿 Sweet pleasant scent",
         language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
       ],
       pricing: {
@@ -96,16 +117,24 @@ export default function ProductsPage() {
     },
     {
       name: language === "fr" ? "Bois de Frêne" : "Ash Wood",
-      image: "/images/mixed-wood.svg",
+      image: "/images/ash-wood.svg",
       description:
         language === "fr"
           ? "Bois dur réputé pour brûler même vert. Excellent pour transition automne-hiver. Séchage rapide et chaleur soutenue. Disponibilité selon la saison."
           : "Hardwood known to burn even when green. Excellent for fall-winter transition. Quick drying and sustained heat. Seasonal availability.",
       features: [
-        language === "fr" ? "🚀 Brûle même légèrement vert" : "🚀 Burns even slightly green",
-        language === "fr" ? "⚡ Allumage facile et rapide" : "⚡ Easy quick ignition",
-        language === "fr" ? "🔥 Chaleur soutenue (4300 kcal/kg)" : "🔥 Sustained heat (4300 kcal/kg)",
-        language === "fr" ? "💨 Séchage rapide (6-12 mois)" : "💨 Quick drying (6-12 months)",
+        language === "fr"
+          ? "🚀 Brûle même légèrement vert"
+          : "🚀 Burns even slightly green",
+        language === "fr"
+          ? "⚡ Allumage facile et rapide"
+          : "⚡ Easy quick ignition",
+        language === "fr"
+          ? "🔥 Chaleur soutenue (4300 kcal/kg)"
+          : "🔥 Sustained heat (4300 kcal/kg)",
+        language === "fr"
+          ? "💨 Séchage rapide (6-12 mois)"
+          : "💨 Quick drying (6-12 months)",
         language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
       ],
       pricing: {
@@ -116,7 +145,7 @@ export default function ProductsPage() {
     },
     {
       name: language === "fr" ? "Bois Vert à Sécher" : "Green Wood to Season",
-      image: "/images/birch-wood.svg",
+      image: "/images/green-wood.svg",
       description:
         language === "fr"
           ? "Bois fraîchement coupé, mélange de feuillus. Pour séchage personnel. Prix avantageux pour commande anticipée. Livraison printemps pour séchage été."
@@ -124,8 +153,12 @@ export default function ProductsPage() {
       features: [
         language === "fr" ? "💵 Prix le plus bas" : "💵 Lowest price",
         language === "fr" ? "🌱 Fraîchement coupé" : "🌱 Freshly cut",
-        language === "fr" ? "⏰ Séchage requis 12-18 mois" : "⏰ Requires 12-18 months seasoning",
-        language === "fr" ? "📅 Commande anticipée recommandée" : "📅 Advance order recommended",
+        language === "fr"
+          ? "⏰ Séchage requis 12-18 mois"
+          : "⏰ Requires 12-18 months seasoning",
+        language === "fr"
+          ? "📅 Commande anticipée recommandée"
+          : "📅 Advance order recommended",
         language === "fr" ? "📏 Bûches 16-18 pouces" : "📏 16-18 inch logs",
       ],
       pricing: {
@@ -142,11 +175,21 @@ export default function ProductsPage() {
           ? "Sélection des meilleurs bois durs : érable, merisier, chêne. Trié manuellement pour qualité maximale. Séché 24+ mois. Pour les connaisseurs exigeants."
           : "Selection of finest hardwoods: maple, yellow birch, oak. Hand-sorted for maximum quality. Seasoned 24+ months. For discerning connoisseurs.",
       features: [
-        language === "fr" ? "⭐ Qualité exceptionnelle" : "⭐ Exceptional quality",
-        language === "fr" ? "🔥 Pouvoir calorifique maximal (4800+ kcal/kg)" : "🔥 Maximum heat output (4800+ kcal/kg)",
-        language === "fr" ? "⏱️ Combustion extra longue (10-12h)" : "⏱️ Extra long burn (10-12h)",
-        language === "fr" ? "✨ Très faible taux de cendres" : "✨ Very low ash content",
-        language === "fr" ? "📏 Bûches calibrées 16 pouces" : "📏 Calibrated 16-inch logs",
+        language === "fr"
+          ? "⭐ Qualité exceptionnelle"
+          : "⭐ Exceptional quality",
+        language === "fr"
+          ? "🔥 Pouvoir calorifique maximal (4800+ kcal/kg)"
+          : "🔥 Maximum heat output (4800+ kcal/kg)",
+        language === "fr"
+          ? "⏱️ Combustion extra longue (10-12h)"
+          : "⏱️ Extra long burn (10-12h)",
+        language === "fr"
+          ? "✨ Très faible taux de cendres"
+          : "✨ Very low ash content",
+        language === "fr"
+          ? "📏 Bûches calibrées 16 pouces"
+          : "📏 Calibrated 16-inch logs",
       ],
       pricing: {
         single: language === "fr" ? "180$" : "$180",
@@ -163,10 +206,14 @@ export default function ProductsPage() {
           : "100% natural wood pellets. Clean and efficient combustion for pellet stoves. Constant automated heat.",
       features: [
         language === "fr" ? "� 100% bois naturel" : "� 100% natural wood",
-        language === "fr" ? "🔥 Combustion propre et efficace" : "🔥 Clean efficient combustion",
+        language === "fr"
+          ? "🔥 Combustion propre et efficace"
+          : "🔥 Clean efficient combustion",
         language === "fr" ? "✨ Faible taux de cendres" : "✨ Low ash content",
         language === "fr" ? "📦 Livré sur palette" : "📦 Delivered on pallet",
-        language === "fr" ? "♨️ Idéal poêles à granulés" : "♨️ Ideal for pellet stoves",
+        language === "fr"
+          ? "♨️ Idéal poêles à granulés"
+          : "♨️ Ideal for pellet stoves",
       ],
       pricing: {
         single: language === "fr" ? "250$/palette" : "$250/pallet",
@@ -182,11 +229,21 @@ export default function ProductsPage() {
           ? "Frêne blanc de première qualité. Réputé pour brûler même légèrement vert. Allumage ultra-rapide, chaleur intense. Stock limité - commandez tôt."
           : "Premium white ash. Known to burn even slightly green. Ultra-fast ignition, intense heat. Limited stock - order early.",
       features: [
-        language === "fr" ? "⚡ Allumage ultra-rapide" : "⚡ Ultra-fast ignition",
-        language === "fr" ? "🔥 Brûle même légèrement vert" : "🔥 Burns even slightly green",
-        language === "fr" ? "🌡️ Chaleur intense (4400 kcal/kg)" : "🌡️ Intense heat (4400 kcal/kg)",
-        language === "fr" ? "💨 Séchage rapide 8-12 mois" : "💨 Quick drying 8-12 months",
-        language === "fr" ? "⚠️ Stock limité - réservation" : "⚠️ Limited stock - reservation",
+        language === "fr"
+          ? "⚡ Allumage ultra-rapide"
+          : "⚡ Ultra-fast ignition",
+        language === "fr"
+          ? "🔥 Brûle même légèrement vert"
+          : "🔥 Burns even slightly green",
+        language === "fr"
+          ? "🌡️ Chaleur intense (4400 kcal/kg)"
+          : "🌡️ Intense heat (4400 kcal/kg)",
+        language === "fr"
+          ? "💨 Séchage rapide 8-12 mois"
+          : "💨 Quick drying 8-12 months",
+        language === "fr"
+          ? "⚠️ Stock limité - réservation"
+          : "⚠️ Limited stock - reservation",
       ],
       pricing: {
         single: language === "fr" ? "165$" : "$165",
@@ -196,17 +253,25 @@ export default function ProductsPage() {
     },
     {
       name: language === "fr" ? "Bouleau Jaune (Merisier)" : "Yellow Birch",
-      image: "/images/birch-wood.svg",
+      image: "/images/yellow-birch.svg",
       description:
         language === "fr"
           ? "Merisier (bouleau jaune) - arbre emblématique du Québec. Bois noble, odeur caractéristique d'essence de wintergreen. Combustion régulière et chaleur soutenue."
           : "Yellow birch - Quebec's emblematic tree. Noble wood, characteristic wintergreen scent. Steady burn and sustained heat.",
       features: [
-        language === "fr" ? "🍁 Bois emblématique du Québec" : "🍁 Quebec's emblematic wood",
-        language === "fr" ? "🌿 Odeur de wintergreen unique" : "🌿 Unique wintergreen scent",
-        language === "fr" ? "🔥 Combustion stable (4500 kcal/kg)" : "🔥 Stable burn (4500 kcal/kg)",
+        language === "fr"
+          ? "🍁 Bois emblématique du Québec"
+          : "🍁 Quebec's emblematic wood",
+        language === "fr"
+          ? "🌿 Odeur de wintergreen unique"
+          : "🌿 Unique wintergreen scent",
+        language === "fr"
+          ? "🔥 Combustion stable (4500 kcal/kg)"
+          : "🔥 Stable burn (4500 kcal/kg)",
         language === "fr" ? "⏱️ Durée 7-9 heures" : "⏱️ Duration 7-9 hours",
-        language === "fr" ? "📏 Bûches sélectionnées 16 pouces" : "📏 Selected 16-inch logs",
+        language === "fr"
+          ? "📏 Bûches sélectionnées 16 pouces"
+          : "📏 Selected 16-inch logs",
       ],
       pricing: {
         single: language === "fr" ? "175$" : "$175",

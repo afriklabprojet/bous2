@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Cherry wood gradient - reddish brown -->
+    <radialGradient id="cherryGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#a1534a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5d2e28;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Log end gradient -->
+    <radialGradient id="cherryEnd" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#d4a59a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#a1534a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5d2e28;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="cherryShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#fff3e0"/>
+  
+  <!-- Stack of cherry wood logs -->
+  <g filter="url(#cherryShadow)">
+    <!-- Back row -->
+    <ellipse cx="250" cy="350" rx="80" ry="40" fill="url(#cherryEnd)"/>
+    <rect x="170" y="200" width="160" height="150" fill="url(#cherryGradient)" rx="5"/>
+    
+    <!-- Growth rings -->
+    <ellipse cx="250" cy="350" rx="70" ry="35" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="250" cy="350" rx="55" ry="27" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="250" cy="350" rx="40" ry="20" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="250" cy="350" rx="25" ry="12" fill="none" stroke="#753a30" stroke-width="2" opacity="0.5"/>
+    
+    <ellipse cx="550" cy="340" rx="75" ry="38" fill="url(#cherryEnd)"/>
+    <rect x="475" y="195" width="150" height="145" fill="url(#cherryGradient)" rx="5"/>
+    
+    <!-- Growth rings -->
+    <ellipse cx="550" cy="340" rx="65" ry="33" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="550" cy="340" rx="50" ry="25" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="550" cy="340" rx="35" ry="18" fill="none" stroke="#753a30" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Middle row -->
+    <ellipse cx="400" cy="420" rx="85" ry="42" fill="url(#cherryEnd)"/>
+    <rect x="315" y="260" width="170" height="160" fill="url(#cherryGradient)" rx="5"/>
+    
+    <!-- Growth rings -->
+    <ellipse cx="400" cy="420" rx="75" ry="37" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="400" cy="420" rx="60" ry="30" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="400" cy="420" rx="45" ry="22" fill="none" stroke="#753a30" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="400" cy="420" rx="30" ry="15" fill="none" stroke="#5d2e28" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Front row -->
+    <ellipse cx="200" cy="480" rx="70" ry="35" fill="url(#cherryEnd)"/>
+    <rect x="130" y="340" width="140" height="140" fill="url(#cherryGradient)" rx="5"/>
+    
+    <!-- Growth rings -->
+    <ellipse cx="200" cy="480" rx="60" ry="30" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="200" cy="480" rx="45" ry="22" fill="none" stroke="#753a30" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="200" cy="480" rx="30" ry="15" fill="none" stroke="#5d2e28" stroke-width="2" opacity="0.6"/>
+    
+    <ellipse cx="600" cy="470" rx="75" ry="38" fill="url(#cherryEnd)"/>
+    <rect x="525" y="325" width="150" height="145" fill="url(#cherryGradient)" rx="5"/>
+    
+    <!-- Growth rings -->
+    <ellipse cx="600" cy="470" rx="65" ry="33" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="600" cy="470" rx="50" ry="25" fill="none" stroke="#8d4a3f" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="600" cy="470" rx="35" ry="18" fill="none" stroke="#753a30" stroke-width="2" opacity="0.5"/>
+  </g>
+  
+  <!-- Cherry badge -->
+  <g transform="translate(650, 80)">
+    <circle cx="0" cy="0" r="60" fill="#a1534a" opacity="0.9"/>
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#fff" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Cherry icon -->
+    <g transform="translate(-20, -15)">
+      <!-- Cherries -->
+      <circle cx="10" cy="25" r="12" fill="#c62828" stroke="#b71c1c" stroke-width="2"/>
+      <circle cx="30" cy="25" r="12" fill="#c62828" stroke="#b71c1c" stroke-width="2"/>
+      
+      <!-- Stems -->
+      <path d="M 10 13 Q 20 -5, 25 -10" stroke="#2e7d32" stroke-width="2" fill="none"/>
+      <path d="M 30 13 Q 25 -5, 25 -10" stroke="#2e7d32" stroke-width="2" fill="none"/>
+      
+      <!-- Leaf -->
+      <ellipse cx="35" cy="-5" rx="10" ry="7" fill="#43a047" stroke="#2e7d32" stroke-width="1.5"/>
+      <path d="M 35 -12 L 35 2" stroke="#2e7d32" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- Label -->
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#5d2e28" text-anchor="middle">MERISIER</text>
+</svg>
