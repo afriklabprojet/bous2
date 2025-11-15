@@ -367,6 +367,16 @@ export default function ProductsPage() {
                     </span>
                   </div>
                 </div>
+
+                {/* Order Button */}
+                <div className="mt-6">
+                  <Link
+                    href="/commande"
+                    className="block w-full bg-amber-800 hover:bg-amber-900 text-white text-center font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
+                    {language === "fr" ? "🛒 Commander ce produit" : "🛒 Order this product"}
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
