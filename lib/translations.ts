@@ -38,15 +38,33 @@ export interface Translation {
     title: string;
     name: string;
     address: string;
+    city: string;
+    postalCode: string;
     woodType: string;
     quantity: string;
     phone: string;
     email: string;
+    paymentMethod: string;
+    deliveryDate: string;
+    notes: string;
     submit: string;
+    emailNote: string;
     woodTypes: {
       maple: string;
       birch: string;
       mixed: string;
+      cherry: string;
+      ash: string;
+      green: string;
+      premium: string;
+      pellets: string;
+      whiteAsh: string;
+      yellowBirch: string;
+    };
+    paymentMethods: {
+      cash: string;
+      interac: string;
+      check: string;
     };
   };
   footer: {
