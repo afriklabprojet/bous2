@@ -90,7 +90,7 @@ export const translations: Record<Language, Translation> = {
     contact: {
       title: "Contactez-nous",
       address: "1100 Route 381, Ferland-et-Boilleau (Québec) G0V 1H0, Canada",
-      email: "contact@jsgc.ca",
+      email: "contact@jsgc.store",
       phone: "Téléphone",
     },
     order: {
@@ -144,7 +144,7 @@ export const translations: Record<Language, Translation> = {
     contact: {
       title: "Contact Us",
       address: "1100 Route 381, Ferland-et-Boilleau (Quebec) G0V 1H0, Canada",
-      email: "contact@jsgc.ca",
+      email: "contact@jsgc.store",
       phone: "Phone",
     },
     order: {

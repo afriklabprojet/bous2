@@ -113,10 +113,10 @@ export default function OrderPage() {
                 : "Call us or send an email"}
             </p>
             <a
-              href="mailto:contact@jsgc.ca"
+              href="mailto:contact@jsgc.store"
               className="text-amber-800 hover:text-amber-900 transition-colors"
             >
-              contact@jsgc.ca
+              contact@jsgc.store
             </a>
           </div>
         </div>

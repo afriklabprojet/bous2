@@ -101,4 +101,4 @@ et ce projet adhère au [Versionnage Sémantique](https://semver.org/lang/fr/).
 
 ---
 
-_Pour contribuer ou suggérer des améliorations, contactez contact@jsgc.ca_
+_Pour contribuer ou suggérer des améliorations, contactez contact@jsgc.store_

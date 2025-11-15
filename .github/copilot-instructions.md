@@ -18,7 +18,7 @@ This project is a professional showcase website for Transport et Bois de Chauffa
 - **Name**: Transport et Bois de Chauffage JSGC
 - **Address**: 1100 Route 381, Ferland-et-Boilleau (Québec) G0V 1H0, Canada
 - **NEQ**: 1175166686
-- **Email**: contact@jsgc.ca
+- **Email**: contact@jsgc.store
 
 ## Pages Structure
 1. **Home (/)**: Hero section with company presentation

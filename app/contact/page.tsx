@@ -87,10 +87,10 @@ export default function ContactPage() {
                       {language === "fr" ? "Courriel" : "Email"}
                     </h3>
                     <a
-                      href="mailto:contact@jsgc.ca"
-                      className="text-green-700 hover:text-green-800 transition-colors"
+                      href="mailto:contact@jsgc.store"
+                      className="text-green-700 hover:text-green-800 font-medium"
                     >
-                      contact@jsgc.ca
+                      contact@jsgc.store
                     </a>
                   </div>
                 </div>

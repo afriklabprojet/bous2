@@ -131,7 +131,7 @@ npm run lint
 
 Le formulaire utilise **mailto:** pour envoyer les commandes à:
 
-- 📬 **contact@jsgc.ca**
+- 📬 **contact@jsgc.store**
 
 Aucun backend nécessaire. Fonctionne immédiatement.
 
@@ -181,7 +181,7 @@ http://localhost:3000/contact   → Contact
 **🌲 Développé avec soin pour Transport et Bois de Chauffage JSGC**
 
 **📍** 1100 Route 381, Ferland-et-Boilleau (Québec) G0V 1H0  
-**📧** contact@jsgc.ca  
+**📧** contact@jsgc.store  
 **🆔** NEQ: 1175166686
 
 ---

@@ -28,7 +28,7 @@ Téléphone: ${formData.phone}
 Courriel: ${formData.email}
     `.trim();
 
-    const mailtoLink = `mailto:contact@jsgc.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contact@jsgc.store?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
 

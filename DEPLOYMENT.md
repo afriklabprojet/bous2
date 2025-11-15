@@ -96,9 +96,9 @@ Si vous souhaitez ajouter un numéro de téléphone, modifiez:
 
 ### Modification de l'email
 
-L'email par défaut est `contact@jsgc.ca`. Pour le changer:
+L'email par défaut est `contact@jsgc.store`. Pour le changer:
 
-- `components/ContactForm.tsx` ligne 16: changez `mailto:contact@jsgc.ca`
+- `components/ContactForm.tsx` ligne 16: changez `mailto:contact@jsgc.store`
 - Mettez à jour toutes les occurrences dans les pages
 
 ## 🧪 Test avant déploiement
