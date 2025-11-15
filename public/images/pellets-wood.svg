@@ -1,48 +1,63 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="400" height="300" fill="#f5f5f5"/>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d7ccc8"/>
+      <stop offset="100%" stop-color="#a1887f"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="2" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
   
-  <!-- Bag of pellets -->
-  <g>
-    <!-- Bag shape -->
-    <path d="M 120 80 Q 120 70 130 70 L 270 70 Q 280 70 280 80 L 290 240 Q 290 250 280 250 L 120 250 Q 110 250 110 240 Z" 
-          fill="#d7ccc8" stroke="#5d4037" stroke-width="3"/>
+  <rect width="800" height="600" fill="#eceff1"/>
+  
+  <g filter="url(#shadow)">
+    <!-- Pallet base -->
+    <rect x="150" y="480" width="500" height="20" fill="#8d6e63" rx="3"/>
+    <rect x="150" y="505" width="500" height="15" fill="#6d4c41" rx="2"/>
     
-    <!-- Bag top closure -->
-    <rect x="130" y="60" width="140" height="15" fill="#8d6e63" stroke="#5d4037" stroke-width="2" rx="3"/>
+    <!-- Bags on pallet - back row -->
+    <rect x="170" y="350" width="110" height="130" fill="url(#bagGrad)" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="185" y="365" width="80" height="50" fill="#fff" stroke="#5d4037" stroke-width="1" rx="3"/>
+    <text x="225" y="390" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="225" y="407" font-family="Arial" font-size="13" text-anchor="middle" fill="#5d4037">15 kg</text>
     
-    <!-- Brand label area -->
-    <rect x="140" y="100" width="120" height="100" fill="#fff" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="295" y="350" width="110" height="130" fill="url(#bagGrad)" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="310" y="365" width="80" height="50" fill="#fff" stroke="#5d4037" stroke-width="1" rx="3"/>
+    <text x="350" y="390" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="350" y="407" font-family="Arial" font-size="13" text-anchor="middle" fill="#5d4037">15 kg</text>
     
-    <!-- Text on label -->
-    <text x="200" y="130" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
-    <text x="200" y="150" font-size="14" font-weight="bold" text-anchor="middle" fill="#5d4037">PREMIUM</text>
-    <text x="200" y="175" font-size="12" text-anchor="middle" fill="#666">100% Bois Dur</text>
-    <text x="200" y="190" font-size="11" text-anchor="middle" fill="#666">15 kg</text>
+    <rect x="420" y="350" width="110" height="130" fill="url(#bagGrad)" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="435" y="365" width="80" height="50" fill="#fff" stroke="#5d4037" stroke-width="1" rx="3"/>
+    <text x="475" y="390" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="475" y="407" font-family="Arial" font-size="13" text-anchor="middle" fill="#5d4037">15 kg</text>
     
-    <!-- Pellets visible through window -->
-    <ellipse cx="200" cy="210" rx="40" ry="15" fill="#8d6e63" opacity="0.3"/>
+    <!-- Front row -->
+    <rect x="230" y="235" width="110" height="130" fill="url(#bagGrad)" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="245" y="250" width="80" height="50" fill="#fff" stroke="#5d4037" stroke-width="1" rx="3"/>
+    <text x="285" y="275" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="285" y="292" font-family="Arial" font-size="13" text-anchor="middle" fill="#5d4037">15 kg</text>
     
-    <!-- Scattered pellets on ground -->
-    <g transform="translate(50, 260)">
-      <ellipse cx="10" cy="0" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="25" cy="2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="40" cy="-1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="55" cy="1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="70" cy="-2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+    <rect x="360" y="235" width="110" height="130" fill="url(#bagGrad)" stroke="#5d4037" stroke-width="2" rx="5"/>
+    <rect x="375" y="250" width="80" height="50" fill="#fff" stroke="#5d4037" stroke-width="1" rx="3"/>
+    <text x="415" y="275" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="415" y="292" font-family="Arial" font-size="13" text-anchor="middle" fill="#5d4037">15 kg</text>
+    
+    <!-- Scattered pellets -->
+    <g opacity="0.8">
+      <ellipse cx="130" cy="525" rx="2" ry="5" fill="#8d6e63"/>
+      <ellipse cx="145" cy="527" rx="2" ry="5" fill="#8d6e63"/>
+      <ellipse cx="665" cy="523" rx="2" ry="5" fill="#8d6e63"/>
+      <ellipse cx="680" cy="526" rx="2" ry="5" fill="#8d6e63"/>
     </g>
-    
-    <g transform="translate(220, 265)">
-      <ellipse cx="10" cy="0" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="25" cy="-2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="40" cy="1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-      <ellipse cx="55" cy="-1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
-    </g>
-    
-    <!-- Flame icon -->
-    <path d="M 340 60 Q 340 45 350 35 Q 360 45 360 60 Q 360 70 350 75 Q 340 70 340 60 Z" 
-          fill="#ff6f00" opacity="0.8"/>
-    <path d="M 345 60 Q 345 50 350 45 Q 355 50 355 60 Q 355 65 350 68 Q 345 65 345 60 Z" 
-          fill="#ffd54f" opacity="0.9"/>
+  </g>
+  
+  <g transform="translate(680, 80)">
+    <circle r="50" fill="#fff" opacity="0.9" filter="url(#shadow)"/>
+    <path d="M -5,-20 L 5,-20 L 10,0 L 5,20 L -5,20 L -10,0 Z" fill="#8d6e63" stroke="#5d4037" stroke-width="2"/>
+    <text y="55" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#5d4037">GRANULÉS</text>
   </g>
 </svg>

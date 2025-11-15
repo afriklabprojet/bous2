@@ -1,112 +1,63 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Defs -->
   <defs>
-    <radialGradient id="birchGradient" cx="50%" cy="30%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#d7ccc8;stop-opacity:1" />
+    <radialGradient id="birchEnd">
+      <stop offset="0%" stop-color="#fafafa"/>
+      <stop offset="40%" stop-color="#f5f5f5"/>
+      <stop offset="70%" stop-color="#efebe9"/>
+      <stop offset="100%" stop-color="#d7ccc8"/>
     </radialGradient>
-    <radialGradient id="birchEnd" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#fafafa;stop-opacity:1" />
-      <stop offset="60%" style="stop-color:#efebe9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#d7ccc8;stop-opacity:1" />
-    </radialGradient>
-    <pattern id="birchBark" patternUnits="userSpaceOnUse" width="60" height="20">
-      <rect width="60" height="20" fill="#fafafa"/>
-      <line x1="0" y1="10" x2="60" y2="10" stroke="#000" stroke-width="2" opacity="0.3"/>
-      <line x1="0" y1="15" x2="60" y2="15" stroke="#000" stroke-width="1" opacity="0.2"/>
-      <ellipse cx="15" cy="10" rx="8" ry="4" fill="#000" opacity="0.15"/>
-      <ellipse cx="45" cy="12" rx="6" ry="3" fill="#000" opacity="0.15"/>
+    <pattern id="birchBark" x="0" y="0" width="10" height="80" patternUnits="userSpaceOnUse">
+      <rect width="10" height="80" fill="#fafafa"/>
+      <line x1="0" y1="15" x2="10" y2="15" stroke="#3e2723" stroke-width="2" opacity="0.4"/>
+      <line x1="0" y1="35" x2="10" y2="35" stroke="#3e2723" stroke-width="1.5" opacity="0.3"/>
+      <line x1="0" y1="50" x2="10" y2="50" stroke="#3e2723" stroke-width="2" opacity="0.4"/>
+      <ellipse cx="5" cy="20" rx="3" ry="5" fill="#000" opacity="0.2"/>
+      <ellipse cx="5" cy="60" rx="4" ry="6" fill="#000" opacity="0.2"/>
     </pattern>
     <filter id="shadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
-      <feOffset dx="2" dy="4" result="offsetblur"/>
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.3"/>
-      </feComponentTransfer>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feOffset dx="2" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   
-  <!-- Background -->
   <rect width="800" height="600" fill="#e8f5e9"/>
   
-  <!-- Wood stack - lighter for birch -->
-  <g>
-    <!-- Back row logs -->
-    <ellipse cx="100" cy="150" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="85" y="130" width="30" height="80" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="100" cy="130" rx="15" ry="20" fill="#f5f5f5"/>
-    <!-- Birch bark texture -->
-    <line x1="85" y1="140" x2="115" y2="140" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="85" y1="160" x2="115" y2="160" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="85" y1="180" x2="115" y2="180" stroke="#8d6e63" stroke-width="1"/>
+  <g filter="url(#shadow)">
+    <!-- Bottom logs with birch bark texture -->
+    <ellipse cx="200" cy="450" rx="60" ry="80" fill="url(#birchBark)"/>
+    <ellipse cx="200" cy="450" rx="55" ry="75" fill="url(#birchEnd)"/>
+    <ellipse cx="200" cy="450" rx="45" ry="62" fill="none" stroke="#bcaaa4" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="200" cy="450" rx="30" ry="40" fill="none" stroke="#a1887f" stroke-width="2" opacity="0.4"/>
     
-    <ellipse cx="150" cy="150" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="135" y="130" width="30" height="80" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="150" cy="130" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="135" y1="145" x2="165" y2="145" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="135" y1="165" x2="165" y2="165" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="135" y1="185" x2="165" y2="185" stroke="#8d6e63" stroke-width="1"/>
+    <ellipse cx="400" cy="460" rx="65" ry="85" fill="url(#birchBark)"/>
+    <ellipse cx="400" cy="460" rx="60" ry="80" fill="url(#birchEnd)"/>
+    <ellipse cx="400" cy="460" rx="50" ry="67" fill="none" stroke="#bcaaa4" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="400" cy="460" rx="35" ry="47" fill="none" stroke="#a1887f" stroke-width="2" opacity="0.4"/>
     
-    <ellipse cx="200" cy="150" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="185" y="130" width="30" height="80" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="200" cy="130" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="185" y1="150" x2="215" y2="150" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="185" y1="170" x2="215" y2="170" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="185" y1="190" x2="215" y2="190" stroke="#8d6e63" stroke-width="1"/>
+    <ellipse cx="600" cy="455" rx="58" ry="78" fill="url(#birchBark)"/>
+    <ellipse cx="600" cy="455" rx="53" ry="73" fill="url(#birchEnd)"/>
+    <ellipse cx="600" cy="455" rx="43" ry="60" fill="none" stroke="#bcaaa4" stroke-width="2" opacity="0.3"/>
     
-    <ellipse cx="250" cy="150" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="235" y="130" width="30" height="80" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="250" cy="130" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="235" y1="155" x2="265" y2="155" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="235" y1="175" x2="265" y2="175" stroke="#8d6e63" stroke-width="1"/>
+    <!-- Top logs -->
+    <ellipse cx="300" cy="320" rx="55" ry="73" fill="url(#birchBark)"/>
+    <ellipse cx="300" cy="320" rx="50" ry="68" fill="url(#birchEnd)"/>
+    <ellipse cx="300" cy="320" rx="40" ry="55" fill="none" stroke="#bcaaa4" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="300" cy="320" rx="28" ry="38" fill="none" stroke="#a1887f" stroke-width="2" opacity="0.4"/>
     
-    <ellipse cx="300" cy="150" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="285" y="130" width="30" height="80" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="300" cy="130" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="285" y1="142" x2="315" y2="142" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="285" y1="162" x2="315" y2="162" stroke="#8d6e63" stroke-width="1"/>
-    <line x1="285" y1="182" x2="315" y2="182" stroke="#8d6e63" stroke-width="1"/>
-    
-    <!-- Front row logs -->
-    <ellipse cx="125" cy="180" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="110" y="160" width="30" height="90" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="125" cy="160" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="110" y1="170" x2="140" y2="170" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="110" y1="190" x2="140" y2="190" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="110" y1="210" x2="140" y2="210" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="110" y1="230" x2="140" y2="230" stroke="#8d6e63" stroke-width="1.5"/>
-    
-    <ellipse cx="175" cy="180" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="160" y="160" width="30" height="90" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="175" cy="160" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="160" y1="175" x2="190" y2="175" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="160" y1="195" x2="190" y2="195" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="160" y1="215" x2="190" y2="215" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="160" y1="235" x2="190" y2="235" stroke="#8d6e63" stroke-width="1.5"/>
-    
-    <ellipse cx="225" cy="180" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="210" y="160" width="30" height="90" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="225" cy="160" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="210" y1="180" x2="240" y2="180" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="210" y1="200" x2="240" y2="200" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="210" y1="220" x2="240" y2="220" stroke="#8d6e63" stroke-width="1.5"/>
-    
-    <ellipse cx="275" cy="180" rx="15" ry="20" fill="#d7ccc8" stroke="#5d4037" stroke-width="2"/>
-    <rect x="260" y="160" width="30" height="90" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-    <ellipse cx="275" cy="160" rx="15" ry="20" fill="#f5f5f5"/>
-    <line x1="260" y1="172" x2="290" y2="172" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="260" y1="192" x2="290" y2="192" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="260" y1="212" x2="290" y2="212" stroke="#8d6e63" stroke-width="1.5"/>
-    <line x1="260" y1="232" x2="290" y2="232" stroke="#8d6e63" stroke-width="1.5"/>
+    <ellipse cx="500" cy="325" rx="57" ry="75" fill="url(#birchBark)"/>
+    <ellipse cx="500" cy="325" rx="52" ry="70" fill="url(#birchEnd)"/>
+    <ellipse cx="500" cy="325" rx="42" ry="57" fill="none" stroke="#bcaaa4" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="500" cy="325" rx="30" ry="40" fill="none" stroke="#a1887f" stroke-width="2" opacity="0.4"/>
   </g>
   
-  <!-- Birch leaf decoration -->
-  <g transform="translate(340, 40)">
-    <ellipse cx="0" cy="0" rx="8" ry="15" fill="#81c784" opacity="0.8"/>
-    <line x1="0" y1="-15" x2="0" y2="15" stroke="#558b2f" stroke-width="1"/>
+  <!-- Birch leaf badge -->
+  <g transform="translate(680, 80)">
+    <circle r="50" fill="#fff" opacity="0.9" filter="url(#shadow)"/>
+    <ellipse cy="-10" rx="12" ry="25" fill="#66bb6a"/>
+    <ellipse cy="10" rx="12" ry="25" fill="#81c784"/>
+    <line y1="-25" y2="25" stroke="#558b2f" stroke-width="3"/>
+    <text y="55" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#558b2f">BOULEAU</text>
   </g>
 </svg>
