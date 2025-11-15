@@ -1,0 +1,48 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f5f5f5"/>
+  
+  <!-- Bag of pellets -->
+  <g>
+    <!-- Bag shape -->
+    <path d="M 120 80 Q 120 70 130 70 L 270 70 Q 280 70 280 80 L 290 240 Q 290 250 280 250 L 120 250 Q 110 250 110 240 Z" 
+          fill="#d7ccc8" stroke="#5d4037" stroke-width="3"/>
+    
+    <!-- Bag top closure -->
+    <rect x="130" y="60" width="140" height="15" fill="#8d6e63" stroke="#5d4037" stroke-width="2" rx="3"/>
+    
+    <!-- Brand label area -->
+    <rect x="140" y="100" width="120" height="100" fill="#fff" stroke="#5d4037" stroke-width="2" rx="5"/>
+    
+    <!-- Text on label -->
+    <text x="200" y="130" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">GRANULÉS</text>
+    <text x="200" y="150" font-size="14" font-weight="bold" text-anchor="middle" fill="#5d4037">PREMIUM</text>
+    <text x="200" y="175" font-size="12" text-anchor="middle" fill="#666">100% Bois Dur</text>
+    <text x="200" y="190" font-size="11" text-anchor="middle" fill="#666">15 kg</text>
+    
+    <!-- Pellets visible through window -->
+    <ellipse cx="200" cy="210" rx="40" ry="15" fill="#8d6e63" opacity="0.3"/>
+    
+    <!-- Scattered pellets on ground -->
+    <g transform="translate(50, 260)">
+      <ellipse cx="10" cy="0" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="25" cy="2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="40" cy="-1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="55" cy="1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="70" cy="-2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+    </g>
+    
+    <g transform="translate(220, 265)">
+      <ellipse cx="10" cy="0" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="25" cy="-2" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="40" cy="1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+      <ellipse cx="55" cy="-1" rx="3" ry="8" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+    </g>
+    
+    <!-- Flame icon -->
+    <path d="M 340 60 Q 340 45 350 35 Q 360 45 360 60 Q 360 70 350 75 Q 340 70 340 60 Z" 
+          fill="#ff6f00" opacity="0.8"/>
+    <path d="M 345 60 Q 345 50 350 45 Q 355 50 355 60 Q 355 65 350 68 Q 345 65 345 60 Z" 
+          fill="#ffd54f" opacity="0.9"/>
+  </g>
+</svg>

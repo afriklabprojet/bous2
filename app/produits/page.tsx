@@ -134,6 +134,86 @@ export default function ProductsPage() {
         bulk5: language === "fr" ? "400$ (5 cordes)" : "$400 (5 cords)",
       },
     },
+    {
+      name: language === "fr" ? "Mélange Premium" : "Premium Mix",
+      image: "/images/premium-mixed.svg",
+      description:
+        language === "fr"
+          ? "Sélection des meilleurs bois durs : érable, merisier, chêne. Trié manuellement pour qualité maximale. Séché 24+ mois. Pour les connaisseurs exigeants."
+          : "Selection of finest hardwoods: maple, yellow birch, oak. Hand-sorted for maximum quality. Seasoned 24+ months. For discerning connoisseurs.",
+      features: [
+        language === "fr" ? "⭐ Qualité exceptionnelle" : "⭐ Exceptional quality",
+        language === "fr" ? "🔥 Pouvoir calorifique maximal (4800+ kcal/kg)" : "🔥 Maximum heat output (4800+ kcal/kg)",
+        language === "fr" ? "⏱️ Combustion extra longue (10-12h)" : "⏱️ Extra long burn (10-12h)",
+        language === "fr" ? "✨ Très faible taux de cendres" : "✨ Very low ash content",
+        language === "fr" ? "📏 Bûches calibrées 16 pouces" : "📏 Calibrated 16-inch logs",
+      ],
+      pricing: {
+        single: language === "fr" ? "180$" : "$180",
+        bulk3: language === "fr" ? "510$ (3 cordes)" : "$510 (3 cords)",
+        bulk5: language === "fr" ? "840$ (5 cordes)" : "$840 (5 cords)",
+      },
+    },
+    {
+      name: language === "fr" ? "Granulés Premium" : "Premium Pellets",
+      image: "/images/pellets-wood.svg",
+      description:
+        language === "fr"
+          ? "Granulés de bois 100% feuillus, faible taux de cendres (<0.5%). DIN Plus certifiés. Chaleur constante et automatisée. Sacs de 15kg, livrés sur palette."
+          : "100% hardwood pellets, low ash content (<0.5%). DIN Plus certified. Constant automated heat. 15kg bags, delivered on pallet.",
+      features: [
+        language === "fr" ? "🌟 Certification DIN Plus" : "🌟 DIN Plus certified",
+        language === "fr" ? "🔥 Haut rendement énergétique" : "🔥 High energy efficiency",
+        language === "fr" ? "✨ Taux de cendres < 0.5%" : "✨ Ash content < 0.5%",
+        language === "fr" ? "📦 Sacs de 15kg (66 sacs/tonne)" : "📦 15kg bags (66 bags/ton)",
+        language === "fr" ? "🚚 Livraison sur palette" : "🚚 Pallet delivery",
+      ],
+      pricing: {
+        single: language === "fr" ? "9$/sac" : "$9/bag",
+        bulk3: language === "fr" ? "550$/tonne (66 sacs)" : "$550/ton (66 bags)",
+        bulk5: language === "fr" ? "2700$/5 tonnes" : "$2700/5 tons",
+      },
+    },
+    {
+      name: language === "fr" ? "Frêne Blanc" : "White Ash",
+      image: "/images/ash-wood.svg",
+      description:
+        language === "fr"
+          ? "Frêne blanc de première qualité. Réputé pour brûler même légèrement vert. Allumage ultra-rapide, chaleur intense. Stock limité - commandez tôt."
+          : "Premium white ash. Known to burn even slightly green. Ultra-fast ignition, intense heat. Limited stock - order early.",
+      features: [
+        language === "fr" ? "⚡ Allumage ultra-rapide" : "⚡ Ultra-fast ignition",
+        language === "fr" ? "🔥 Brûle même légèrement vert" : "🔥 Burns even slightly green",
+        language === "fr" ? "🌡️ Chaleur intense (4400 kcal/kg)" : "🌡️ Intense heat (4400 kcal/kg)",
+        language === "fr" ? "💨 Séchage rapide 8-12 mois" : "💨 Quick drying 8-12 months",
+        language === "fr" ? "⚠️ Stock limité - réservation" : "⚠️ Limited stock - reservation",
+      ],
+      pricing: {
+        single: language === "fr" ? "165$" : "$165",
+        bulk3: language === "fr" ? "465$ (3 cordes)" : "$465 (3 cords)",
+        bulk5: language === "fr" ? "750$ (5 cordes)" : "$750 (5 cords)",
+      },
+    },
+    {
+      name: language === "fr" ? "Bouleau Jaune (Merisier)" : "Yellow Birch",
+      image: "/images/birch-wood.svg",
+      description:
+        language === "fr"
+          ? "Merisier (bouleau jaune) - arbre emblématique du Québec. Bois noble, odeur caractéristique d'essence de wintergreen. Combustion régulière et chaleur soutenue."
+          : "Yellow birch - Quebec's emblematic tree. Noble wood, characteristic wintergreen scent. Steady burn and sustained heat.",
+      features: [
+        language === "fr" ? "🍁 Bois emblématique du Québec" : "🍁 Quebec's emblematic wood",
+        language === "fr" ? "🌿 Odeur de wintergreen unique" : "🌿 Unique wintergreen scent",
+        language === "fr" ? "🔥 Combustion stable (4500 kcal/kg)" : "🔥 Stable burn (4500 kcal/kg)",
+        language === "fr" ? "⏱️ Durée 7-9 heures" : "⏱️ Duration 7-9 hours",
+        language === "fr" ? "📏 Bûches sélectionnées 16 pouces" : "📏 Selected 16-inch logs",
+      ],
+      pricing: {
+        single: language === "fr" ? "175$" : "$175",
+        bulk3: language === "fr" ? "495$ (3 cordes)" : "$495 (3 cords)",
+        bulk5: language === "fr" ? "810$ (5 cordes)" : "$810 (5 cords)",
+      },
+    },
   ];
 
   return (
