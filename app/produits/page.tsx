@@ -9,19 +9,20 @@ export default function ProductsPage() {
 
   const products = [
     {
-      name: language === "fr" ? "Bois d'Érable" : "Maple Wood",
+      name: language === "fr" ? "Bois d'Érable Premium" : "Premium Maple Wood",
       image: "/images/maple-wood.svg",
       description:
         language === "fr"
-          ? "Bois dur de première qualité, séché naturellement. Excellent pouvoir calorifique et combustion longue durée."
-          : "Premium hardwood, naturally dried. Excellent heat output and long-lasting burn.",
+          ? "Bois dur de première qualité, séché naturellement 18-24 mois. Excellent pouvoir calorifique et combustion longue durée. Idéal pour chauffage principal."
+          : "Premium hardwood, naturally dried 18-24 months. Excellent heat output and long-lasting burn. Ideal for primary heating.",
       features: [
         language === "fr"
-          ? "🔥 Haute densité énergétique"
-          : "🔥 High energy density",
-        language === "fr" ? "⏱️ Combustion lente" : "⏱️ Slow burning",
+          ? "🔥 Haute densité énergétique (4700 kcal/kg)"
+          : "🔥 High energy density (4700 kcal/kg)",
+        language === "fr" ? "⏱️ Combustion lente (8-10h)" : "⏱️ Slow burning (8-10h)",
         language === "fr" ? "🌡️ Température élevée" : "🌡️ High temperature",
-        language === "fr" ? "✨ Faible taux de cendres" : "✨ Low ash content",
+        language === "fr" ? "✨ Faible taux de cendres (1%)" : "✨ Low ash content (1%)",
+        language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
       ],
       pricing: {
         single: language === "fr" ? "160$" : "$160",
@@ -30,17 +31,18 @@ export default function ProductsPage() {
       },
     },
     {
-      name: language === "fr" ? "Bois de Bouleau" : "Birch Wood",
+      name: language === "fr" ? "Bois de Bouleau Blanc" : "White Birch Wood",
       image: "/images/birch-wood.svg",
       description:
         language === "fr"
-          ? "Bois franc réputé pour son odeur agréable. Parfait pour une ambiance chaleureuse."
-          : "Hardwood known for its pleasant scent. Perfect for a warm atmosphere.",
+          ? "Bois franc réputé pour son odeur agréable et son écorce blanche distinctive. Parfait pour une ambiance chaleureuse. Séchage naturel 12-18 mois."
+          : "Hardwood known for its pleasant scent and distinctive white bark. Perfect for a warm atmosphere. Natural drying 12-18 months.",
       features: [
-        language === "fr" ? "🌲 Odeur agréable" : "🌲 Pleasant scent",
-        language === "fr" ? "🔥 Flamme vive" : "🔥 Bright flame",
+        language === "fr" ? "🌲 Odeur agréable caractéristique" : "🌲 Characteristic pleasant scent",
+        language === "fr" ? "🔥 Flamme vive et belle" : "🔥 Bright beautiful flame",
         language === "fr" ? "💨 Séchage rapide" : "💨 Quick drying",
-        language === "fr" ? "🏡 Idéal résidentiel" : "🏡 Ideal for residential",
+        language === "fr" ? "🏡 Idéal résidentiel et foyer" : "🏡 Ideal for residential & fireplace",
+        language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
       ],
       pricing: {
         single: language === "fr" ? "150$" : "$150",
@@ -49,26 +51,87 @@ export default function ProductsPage() {
       },
     },
     {
-      name: language === "fr" ? "Bois Mélangé" : "Mixed Wood",
+      name: language === "fr" ? "Bois Mélangé Économique" : "Economy Mixed Wood",
       image: "/images/mixed-wood.svg",
       description:
         language === "fr"
-          ? "Mélange équilibré de bois durs. Solution économique sans compromis sur la qualité."
-          : "Balanced mix of hardwoods. Economical solution without compromising quality.",
+          ? "Mélange équilibré de bois durs (érable, bouleau, hêtre). Solution économique sans compromis sur la qualité. Parfait pour usage quotidien."
+          : "Balanced mix of hardwoods (maple, birch, beech). Economical solution without compromising quality. Perfect for daily use.",
       features: [
         language === "fr"
           ? "💰 Meilleur rapport qualité-prix"
           : "💰 Best value for money",
         language === "fr"
-          ? "🔥 Performance constante"
-          : "🔥 Consistent performance",
-        language === "fr" ? "📦 Grande polyvalence" : "📦 Great versatility",
-        language === "fr" ? "✅ Toujours disponible" : "✅ Always available",
+          ? "🔥 Performance constante (4200 kcal/kg)"
+          : "🔥 Consistent performance (4200 kcal/kg)",
+        language === "fr" ? "📦 Grande polyvalence d'usage" : "📦 Great versatility",
+        language === "fr" ? "✅ Toujours disponible en stock" : "✅ Always in stock",
+        language === "fr" ? "📏 Bûches 14-18 pouces" : "📏 14-18 inch logs",
       ],
       pricing: {
         single: language === "fr" ? "130$" : "$130",
         bulk3: language === "fr" ? "360$ (3 cordes)" : "$360 (3 cords)",
         bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
+      },
+    },
+    {
+      name: language === "fr" ? "Bois de Merisier" : "Yellow Birch Wood",
+      image: "/images/maple-wood.svg",
+      description:
+        language === "fr"
+          ? "Bois dur noble québécois, excellent pouvoir calorifique. Combustion lente et régulière. Prisé pour son odeur subtile et sa qualité exceptionnelle."
+          : "Noble Quebec hardwood, excellent heating value. Slow and steady burn. Prized for subtle scent and exceptional quality.",
+      features: [
+        language === "fr" ? "⭐ Qualité supérieure" : "⭐ Superior quality",
+        language === "fr" ? "🔥 Combustion régulière (7-9h)" : "🔥 Steady burn (7-9h)",
+        language === "fr" ? "🌡️ Chaleur intense et durable" : "🌡️ Intense lasting heat",
+        language === "fr" ? "🌿 Odeur douce et agréable" : "🌿 Sweet pleasant scent",
+        language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
+      ],
+      pricing: {
+        single: language === "fr" ? "170$" : "$170",
+        bulk3: language === "fr" ? "480$ (3 cordes)" : "$480 (3 cords)",
+        bulk5: language === "fr" ? "780$ (5 cordes)" : "$780 (5 cords)",
+      },
+    },
+    {
+      name: language === "fr" ? "Bois de Frêne" : "Ash Wood",
+      image: "/images/mixed-wood.svg",
+      description:
+        language === "fr"
+          ? "Bois dur réputé pour brûler même vert. Excellent pour transition automne-hiver. Séchage rapide et chaleur soutenue. Disponibilité selon la saison."
+          : "Hardwood known to burn even when green. Excellent for fall-winter transition. Quick drying and sustained heat. Seasonal availability.",
+      features: [
+        language === "fr" ? "🚀 Brûle même légèrement vert" : "🚀 Burns even slightly green",
+        language === "fr" ? "⚡ Allumage facile et rapide" : "⚡ Easy quick ignition",
+        language === "fr" ? "🔥 Chaleur soutenue (4300 kcal/kg)" : "🔥 Sustained heat (4300 kcal/kg)",
+        language === "fr" ? "💨 Séchage rapide (6-12 mois)" : "💨 Quick drying (6-12 months)",
+        language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
+      ],
+      pricing: {
+        single: language === "fr" ? "155$" : "$155",
+        bulk3: language === "fr" ? "435$ (3 cordes)" : "$435 (3 cords)",
+        bulk5: language === "fr" ? "700$ (5 cordes)" : "$700 (5 cords)",
+      },
+    },
+    {
+      name: language === "fr" ? "Bois Vert à Sécher" : "Green Wood to Season",
+      image: "/images/birch-wood.svg",
+      description:
+        language === "fr"
+          ? "Bois fraîchement coupé, mélange de feuillus. Pour séchage personnel. Prix avantageux pour commande anticipée. Livraison printemps pour séchage été."
+          : "Freshly cut wood, hardwood mix. For personal seasoning. Advantageous price for advance orders. Spring delivery for summer seasoning.",
+      features: [
+        language === "fr" ? "💵 Prix le plus bas" : "💵 Lowest price",
+        language === "fr" ? "🌱 Fraîchement coupé" : "🌱 Freshly cut",
+        language === "fr" ? "⏰ Séchage requis 12-18 mois" : "⏰ Requires 12-18 months seasoning",
+        language === "fr" ? "📅 Commande anticipée recommandée" : "📅 Advance order recommended",
+        language === "fr" ? "📏 Bûches 16-18 pouces" : "📏 16-18 inch logs",
+      ],
+      pricing: {
+        single: language === "fr" ? "90$" : "$90",
+        bulk3: language === "fr" ? "240$ (3 cordes)" : "$240 (3 cords)",
+        bulk5: language === "fr" ? "400$ (5 cordes)" : "$400 (5 cords)",
       },
     },
   ];
