@@ -159,19 +159,19 @@ export default function ProductsPage() {
       image: "/images/pellets-wood.svg",
       description:
         language === "fr"
-          ? "Granulés de bois 100% feuillus, faible taux de cendres (<0.5%). DIN Plus certifiés. Chaleur constante et automatisée. Sacs de 15kg, livrés sur palette."
-          : "100% hardwood pellets, low ash content (<0.5%). DIN Plus certified. Constant automated heat. 15kg bags, delivered on pallet.",
+          ? "Granulés de bois 100% naturels. Combustion propre et efficace pour poêles à granulés. Chaleur constante et automatisée."
+          : "100% natural wood pellets. Clean and efficient combustion for pellet stoves. Constant automated heat.",
       features: [
-        language === "fr" ? "🌟 Certification DIN Plus" : "🌟 DIN Plus certified",
-        language === "fr" ? "🔥 Haut rendement énergétique" : "🔥 High energy efficiency",
-        language === "fr" ? "✨ Taux de cendres < 0.5%" : "✨ Ash content < 0.5%",
-        language === "fr" ? "📦 Sacs de 15kg (66 sacs/tonne)" : "📦 15kg bags (66 bags/ton)",
-        language === "fr" ? "🚚 Livraison sur palette" : "🚚 Pallet delivery",
+        language === "fr" ? "� 100% bois naturel" : "� 100% natural wood",
+        language === "fr" ? "🔥 Combustion propre et efficace" : "🔥 Clean efficient combustion",
+        language === "fr" ? "✨ Faible taux de cendres" : "✨ Low ash content",
+        language === "fr" ? "📦 Livré sur palette" : "📦 Delivered on pallet",
+        language === "fr" ? "♨️ Idéal poêles à granulés" : "♨️ Ideal for pellet stoves",
       ],
       pricing: {
-        single: language === "fr" ? "9$/sac" : "$9/bag",
-        bulk3: language === "fr" ? "550$/tonne (66 sacs)" : "$550/ton (66 bags)",
-        bulk5: language === "fr" ? "2700$/5 tonnes" : "$2700/5 tons",
+        single: language === "fr" ? "250$/palette" : "$250/pallet",
+        bulk3: language === "fr" ? "720$ (3 palettes)" : "$720 (3 pallets)",
+        bulk5: language === "fr" ? "1150$ (5 palettes)" : "$1150 (5 pallets)",
       },
     },
     {
