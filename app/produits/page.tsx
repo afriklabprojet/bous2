@@ -246,36 +246,6 @@ function ProductsContent({ language }: { language: string }) {
       },
     },
     {
-      name: language === "fr" ? "Frêne Blanc" : "White Ash",
-      image: "/images/ash-wood.jpg",
-      description:
-        language === "fr"
-          ? "Frêne blanc de première qualité. Réputé pour brûler même légèrement vert. Allumage ultra-rapide, chaleur intense. Stock limité - commandez tôt."
-          : "Premium white ash. Known to burn even slightly green. Ultra-fast ignition, intense heat. Limited stock - order early.",
-      features: [
-        language === "fr"
-          ? "⚡ Allumage ultra-rapide"
-          : "⚡ Ultra-fast ignition",
-        language === "fr"
-          ? "🔥 Brûle même légèrement vert"
-          : "🔥 Burns even slightly green",
-        language === "fr"
-          ? "🌡️ Chaleur intense (4400 kcal/kg)"
-          : "🌡️ Intense heat (4400 kcal/kg)",
-        language === "fr"
-          ? "💨 Séchage rapide 8-12 mois"
-          : "💨 Quick drying 8-12 months",
-        language === "fr"
-          ? "⚠️ Stock limité - réservation"
-          : "⚠️ Limited stock - reservation",
-      ],
-      pricing: {
-        single: language === "fr" ? "125$" : "$125",
-        bulk3: language === "fr" ? "360$ (3 cordes)" : "$360 (3 cords)",
-        bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
-      },
-    },
-    {
       name: language === "fr" ? "Bouleau Jaune (Merisier)" : "Yellow Birch",
       image: "/images/yellow-birch.svg",
       description:
