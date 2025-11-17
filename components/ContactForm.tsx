@@ -4,23 +4,23 @@ import { useState, useMemo } from "react";
 import { useLanguage } from "@/lib/language-context";
 
 // Prix promotionnels par volume (cordes/palettes)
-const WOOD_PRICING: { 
-  [key: string]: { 
-    single: number; 
-    bulk3: number; 
-    bulk5: number; 
-  } 
+const WOOD_PRICING: {
+  [key: string]: {
+    single: number;
+    bulk3: number;
+    bulk5: number;
+  };
 } = {
   maple: { single: 130, bulk3: 370, bulk5: 600 },
   birch: { single: 120, bulk3: 340, bulk5: 550 },
   mixed: { single: 95, bulk3: 270, bulk5: 450 },
   cherry: { single: 140, bulk3: 400, bulk5: 670 },
-  ash: { single: 115, bulk3: 330, bulk5: 550 },
-  green: { single: 80, bulk3: 220, bulk5: 380 },
+  ash: { single: 115, bulk3: 330, bulk5: 540 },
+  green: { single: 80, bulk3: 230, bulk5: 380 },
   premium: { single: 125, bulk3: 360, bulk5: 600 },
   whiteAsh: { single: 125, bulk3: 360, bulk5: 600 },
-  yellowBirch: { single: 145, bulk3: 410, bulk5: 690 },
-  pellets: { single: 260, bulk3: 740, bulk5: 1200 },
+  yellowBirch: { single: 145, bulk3: 420, bulk5: 700 },
+  pellets: { single: 260, bulk3: 750, bulk5: 1250 },
 };
 
 export default function ContactForm() {
@@ -47,18 +47,22 @@ export default function ContactForm() {
   // Calcul du total avec prix promotionnels et taxes
   const priceCalculation = useMemo(() => {
     const qty = parseInt(formData.quantity) || 0;
-    const pricing = WOOD_PRICING[formData.woodType] || { single: 0, bulk3: 0, bulk5: 0 };
-    
+    const pricing = WOOD_PRICING[formData.woodType] || {
+      single: 0,
+      bulk3: 0,
+      bulk5: 0,
+    };
+
     // Calculer le prix selon la quantité avec les promotions
     let subtotal = 0;
     let unitPrice = pricing.single;
-    
+
     if (qty >= 5) {
       // Prix pour 5+ cordes
       const sets5 = Math.floor(qty / 5);
       const remainder = qty % 5;
       subtotal = sets5 * pricing.bulk5;
-      
+
       if (remainder >= 3) {
         subtotal += pricing.bulk3;
       } else {
@@ -73,7 +77,7 @@ export default function ContactForm() {
       // Prix unitaire pour 1-2 cordes
       subtotal = qty * pricing.single;
     }
-    
+
     const tps = subtotal * 0.05; // TPS 5%
     const tvq = subtotal * 0.09975; // TVQ 9.975%
     const total = subtotal + tps + tvq;
@@ -471,24 +475,36 @@ ${
                   <div className="bg-amber-100 border border-amber-300 rounded-lg p-3 mb-3">
                     <p className="text-amber-800 font-bold flex items-center gap-2">
                       <span>⭐</span>
-                      {language === "fr" ? "MEILLEUR PRIX - 5+ cordes!" : "BEST PRICE - 5+ cords!"}
+                      {language === "fr"
+                        ? "MEILLEUR PRIX - 5+ cordes!"
+                        : "BEST PRICE - 5+ cords!"}
                     </p>
                   </div>
                 )}
-                {priceCalculation.quantity >= 3 && priceCalculation.quantity < 5 && (
-                  <div className="bg-green-100 border border-green-300 rounded-lg p-3 mb-3">
-                    <p className="text-green-800 font-bold flex items-center gap-2">
-                      <span>💰</span>
-                      {language === "fr" ? "Économisez - 3+ cordes!" : "Save Money - 3+ cords!"}
-                    </p>
-                  </div>
-                )}
+                {priceCalculation.quantity >= 3 &&
+                  priceCalculation.quantity < 5 && (
+                    <div className="bg-green-100 border border-green-300 rounded-lg p-3 mb-3">
+                      <p className="text-green-800 font-bold flex items-center gap-2">
+                        <span>💰</span>
+                        {language === "fr"
+                          ? "Économisez - 3+ cordes!"
+                          : "Save Money - 3+ cords!"}
+                      </p>
+                    </div>
+                  )}
                 <div className="flex justify-between">
                   <span className="text-gray-600">
                     {language === "fr" ? "Quantité" : "Quantity"}:
                   </span>
                   <span className="font-semibold">
-                    {priceCalculation.quantity} {language === "fr" ? (formData.woodType === "pellets" ? "palette(s)" : "corde(s)") : (formData.woodType === "pellets" ? "pallet(s)" : "cord(s)")}
+                    {priceCalculation.quantity}{" "}
+                    {language === "fr"
+                      ? formData.woodType === "pellets"
+                        ? "palette(s)"
+                        : "corde(s)"
+                      : formData.woodType === "pellets"
+                      ? "pallet(s)"
+                      : "cord(s)"}
                   </span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-green-200">
