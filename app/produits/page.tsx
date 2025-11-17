@@ -55,9 +55,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "150$" : "$150",
-        bulk3: language === "fr" ? "420$ (3 cordes)" : "$420 (3 cords)",
-        bulk5: language === "fr" ? "680$ (5 cordes)" : "$680 (5 cords)",
+        single: language === "fr" ? "120$" : "$120",
+        bulk3: language === "fr" ? "340$ (3 cordes)" : "$340 (3 cords)",
+        bulk5: language === "fr" ? "550$ (5 cordes)" : "$550 (5 cords)",
       },
     },
     {
@@ -84,9 +84,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 14-18 pouces" : "📏 14-18 inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "130$" : "$130",
-        bulk3: language === "fr" ? "360$ (3 cordes)" : "$360 (3 cords)",
-        bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
+        single: language === "fr" ? "95$" : "$95",
+        bulk3: language === "fr" ? "270$ (3 cordes)" : "$270 (3 cords)",
+        bulk5: language === "fr" ? "450$ (5 cordes)" : "$450 (5 cords)",
       },
     },
     {
@@ -110,9 +110,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "170$" : "$170",
-        bulk3: language === "fr" ? "480$ (3 cordes)" : "$480 (3 cords)",
-        bulk5: language === "fr" ? "780$ (5 cordes)" : "$780 (5 cords)",
+        single: language === "fr" ? "140$" : "$140",
+        bulk3: language === "fr" ? "400$ (3 cordes)" : "$400 (3 cords)",
+        bulk5: language === "fr" ? "670$ (5 cordes)" : "$670 (5 cords)",
       },
     },
     {
@@ -138,9 +138,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 14-16 pouces" : "📏 14-16 inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "155$" : "$155",
-        bulk3: language === "fr" ? "435$ (3 cordes)" : "$435 (3 cords)",
-        bulk5: language === "fr" ? "700$ (5 cordes)" : "$700 (5 cords)",
+        single: language === "fr" ? "115$" : "$115",
+        bulk3: language === "fr" ? "330$ (3 cordes)" : "$330 (3 cords)",
+        bulk5: language === "fr" ? "540$ (5 cordes)" : "$540 (5 cords)",
       },
     },
     {
@@ -162,9 +162,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 16-18 pouces" : "📏 16-18 inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "90$" : "$90",
-        bulk3: language === "fr" ? "240$ (3 cordes)" : "$240 (3 cords)",
-        bulk5: language === "fr" ? "400$ (5 cordes)" : "$400 (5 cords)",
+        single: language === "fr" ? "80$" : "$80",
+        bulk3: language === "fr" ? "230$ (3 cordes)" : "$230 (3 cords)",
+        bulk5: language === "fr" ? "380$ (5 cordes)" : "$380 (5 cords)",
       },
     },
     {
@@ -172,8 +172,8 @@ export default function ProductsPage() {
       image: "/images/premium-mixed.svg",
       description:
         language === "fr"
-          ? "Sélection des meilleurs bois durs : érable, merisier, chêne. Trié manuellement pour qualité maximale. Séché 24+ mois. Pour les connaisseurs exigeants."
-          : "Selection of finest hardwoods: maple, yellow birch, oak. Hand-sorted for maximum quality. Seasoned 24+ months. For discerning connoisseurs.",
+          ? "Sélection des meilleurs bois durs : érable, frêne, merisier. Trié manuellement pour qualité maximale. Séché 24+ mois. Pour les connaisseurs exigeants."
+          : "Selection of finest hardwoods: maple, ash, yellow birch. Hand-sorted for maximum quality. Seasoned 24+ months. For discerning connoisseurs.",
       features: [
         language === "fr"
           ? "⭐ Qualité exceptionnelle"
@@ -192,9 +192,9 @@ export default function ProductsPage() {
           : "📏 Calibrated 16-inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "180$" : "$180",
-        bulk3: language === "fr" ? "510$ (3 cordes)" : "$510 (3 cords)",
-        bulk5: language === "fr" ? "840$ (5 cordes)" : "$840 (5 cords)",
+        single: language === "fr" ? "125$" : "$125",
+        bulk3: language === "fr" ? "360$ (3 cordes)" : "$360 (3 cords)",
+        bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
       },
     },
     {
@@ -202,23 +202,23 @@ export default function ProductsPage() {
       image: "/images/pellets-wood.svg",
       description:
         language === "fr"
-          ? "Granulés de bois 100% naturels. Combustion propre et efficace pour poêles à granulés. Chaleur constante et automatisée."
-          : "100% natural wood pellets. Clean and efficient combustion for pellet stoves. Constant automated heat.",
+          ? "Granulés de bois 100% naturels, sacs de 40 lb. Combustion propre et efficace pour poêles à granulés. Chaleur constante et automatisée. Palette de 50 sacs."
+          : "100% natural wood pellets, 40 lb bags. Clean and efficient combustion for pellet stoves. Constant automated heat. 50-bag pallet.",
       features: [
-        language === "fr" ? "� 100% bois naturel" : "� 100% natural wood",
+        language === "fr" ? "🌱 100% bois naturel" : "🌱 100% natural wood",
         language === "fr"
           ? "🔥 Combustion propre et efficace"
           : "🔥 Clean efficient combustion",
         language === "fr" ? "✨ Faible taux de cendres" : "✨ Low ash content",
-        language === "fr" ? "📦 Livré sur palette" : "📦 Delivered on pallet",
+        language === "fr" ? "📦 Palette de 50 sacs (40 lb)" : "📦 50-bag pallet (40 lb)",
         language === "fr"
           ? "♨️ Idéal poêles à granulés"
           : "♨️ Ideal for pellet stoves",
       ],
       pricing: {
-        single: language === "fr" ? "250$/palette" : "$250/pallet",
-        bulk3: language === "fr" ? "720$ (3 palettes)" : "$720 (3 pallets)",
-        bulk5: language === "fr" ? "1150$ (5 palettes)" : "$1150 (5 pallets)",
+        single: language === "fr" ? "260$/palette" : "$260/pallet",
+        bulk3: language === "fr" ? "750$ (3 palettes)" : "$750 (3 pallets)",
+        bulk5: language === "fr" ? "1250$ (5 palettes)" : "$1250 (5 pallets)",
       },
     },
     {
@@ -246,9 +246,9 @@ export default function ProductsPage() {
           : "⚠️ Limited stock - reservation",
       ],
       pricing: {
-        single: language === "fr" ? "165$" : "$165",
-        bulk3: language === "fr" ? "465$ (3 cordes)" : "$465 (3 cords)",
-        bulk5: language === "fr" ? "750$ (5 cordes)" : "$750 (5 cords)",
+        single: language === "fr" ? "125$" : "$125",
+        bulk3: language === "fr" ? "360$ (3 cordes)" : "$360 (3 cords)",
+        bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
       },
     },
     {
@@ -274,9 +274,9 @@ export default function ProductsPage() {
           : "📏 Selected 16-inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "175$" : "$175",
-        bulk3: language === "fr" ? "495$ (3 cordes)" : "$495 (3 cords)",
-        bulk5: language === "fr" ? "810$ (5 cordes)" : "$810 (5 cords)",
+        single: language === "fr" ? "145$" : "$145",
+        bulk3: language === "fr" ? "420$ (3 cordes)" : "$420 (3 cords)",
+        bulk5: language === "fr" ? "700$ (5 cordes)" : "$700 (5 cords)",
       },
     },
   ];
