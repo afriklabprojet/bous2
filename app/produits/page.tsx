@@ -191,7 +191,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Mélange Premium" : "Premium Mix",
-      image: "/images/premium-mixed.svg",
+      image: "/images/premium-mixed.jpg",
       description:
         language === "fr"
           ? "Sélection des meilleurs bois durs : érable, frêne, merisier. Trié manuellement pour qualité maximale. Séché 24+ mois. Pour les connaisseurs exigeants."
