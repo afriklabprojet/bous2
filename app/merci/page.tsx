@@ -189,6 +189,44 @@ function ThankYouContent() {
             </div>
           </div>
 
+          {/* Payment Instructions */}
+          <div className="bg-linear-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-300 mb-8">
+            <h3 className="text-xl font-bold mb-4 text-amber-800 flex items-center gap-2">
+              <span>💳</span>
+              {language === "fr"
+                ? "Instructions de Paiement"
+                : "Payment Instructions"}
+            </h3>
+            <div className="bg-white rounded-lg p-6 border-2 border-amber-200">
+              <p className="text-gray-700 mb-4">
+                {language === "fr"
+                  ? "Veuillez envoyer votre virement Interac à :"
+                  : "Please send your Interac transfer to:"}
+              </p>
+              <div className="bg-green-700 text-white rounded-xl p-6 text-center mb-4">
+                <p className="text-sm mb-2 opacity-90">
+                  {language === "fr" ? "Adresse email Interac" : "Interac email address"}
+                </p>
+                <p className="text-2xl md:text-3xl font-bold">
+                  📧 contact@jsgc.store
+                </p>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                <p className="text-sm text-gray-700 flex items-start gap-2">
+                  <span className="text-blue-600 font-bold text-lg">💡</span>
+                  <span>
+                    <strong>
+                      {language === "fr" ? "Important :" : "Important:"}
+                    </strong>{" "}
+                    {language === "fr"
+                      ? "Veuillez inclure votre nom et la référence de commande dans le message du virement."
+                      : "Please include your name and order reference in the transfer message."}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Next Steps */}
           <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
             <h3 className="text-xl font-bold mb-4 text-blue-800 flex items-center gap-2">
