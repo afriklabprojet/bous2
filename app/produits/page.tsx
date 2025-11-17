@@ -29,9 +29,9 @@ export default function ProductsPage() {
         language === "fr" ? "📏 Bûches 16 pouces" : "📏 16-inch logs",
       ],
       pricing: {
-        single: language === "fr" ? "160$" : "$160",
-        bulk3: language === "fr" ? "450$ (3 cordes)" : "$450 (3 cords)",
-        bulk5: language === "fr" ? "720$ (5 cordes)" : "$720 (5 cords)",
+        single: language === "fr" ? "130$" : "$130",
+        bulk3: language === "fr" ? "370$ (3 cordes)" : "$370 (3 cords)",
+        bulk5: language === "fr" ? "600$ (5 cordes)" : "$600 (5 cords)",
       },
     },
     {

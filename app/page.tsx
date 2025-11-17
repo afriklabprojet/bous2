@@ -74,9 +74,9 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
-                <span className="text-4xl font-bold text-amber-800">160$</span>
+                <span className="text-4xl font-bold text-amber-800">130$</span>
                 <span className="text-gray-500 text-sm">
-                  / {language === "fr" ? "corde" : "cord"}
+                  / {language === "fr" ? "corde livrée" : "delivered cord"}
                 </span>
               </div>
               <Link
