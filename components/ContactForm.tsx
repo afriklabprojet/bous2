@@ -13,7 +13,7 @@ const WOOD_PRICES: { [key: string]: number } = {
   green: 80,
   premium: 125,
   whiteAsh: 125,
-  yellowBirch: 145,
+  yellowBirch: 145, // Bouleau Jaune (Merisier)
   pellets: 260, // par palette
 };
 
