@@ -16,7 +16,10 @@ export default function ServicesPage() {
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="inline-block bg-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
-            ⚡ {language === "fr" ? "SERVICES PROFESSIONNELS" : "PROFESSIONAL SERVICES"}
+            ⚡{" "}
+            {language === "fr"
+              ? "SERVICES PROFESSIONNELS"
+              : "PROFESSIONAL SERVICES"}
           </div>
           <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6">
             {t.services.title}
@@ -68,7 +71,7 @@ export default function ServicesPage() {
             {language === "fr" ? "Nos Services" : "Our Services"}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {language === "fr" 
+            {language === "fr"
               ? "Des solutions complètes pour tous vos besoins en transport et chauffage"
               : "Complete solutions for all your transport and heating needs"}
           </p>
@@ -150,8 +153,18 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-green-100 p-4 rounded-xl">
-                  <svg className="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <svg
+                    className="w-8 h-8 text-green-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
                   </svg>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-green-800">
@@ -168,7 +181,9 @@ export default function ServicesPage() {
                   <div className="text-green-600 text-xl">✓</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      {language === "fr" ? "Transport Varié" : "Varied Transport"}
+                      {language === "fr"
+                        ? "Transport Varié"
+                        : "Varied Transport"}
                     </h4>
                     <p className="text-sm text-gray-600">
                       {language === "fr"
@@ -226,8 +241,18 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-amber-100 p-4 rounded-xl">
-                  <svg className="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                  <svg
+                    className="w-8 h-8 text-amber-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+                    />
                   </svg>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-amber-900">
@@ -283,9 +308,19 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-blue-100 p-4 rounded-xl">
-                  <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-8 h-8 text-blue-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                    />
                   </svg>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-blue-900">
@@ -341,7 +376,9 @@ export default function ServicesPage() {
                   <div className="text-blue-600 text-xl">✓</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      {language === "fr" ? "Professionnalisme" : "Professionalism"}
+                      {language === "fr"
+                        ? "Professionnalisme"
+                        : "Professionalism"}
                     </h4>
                     <p className="text-sm text-gray-600">
                       {language === "fr"
@@ -363,8 +400,8 @@ export default function ServicesPage() {
           </div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-              {language === "fr" 
-                ? "Prêt à Découvrir Nos Produits ?" 
+              {language === "fr"
+                ? "Prêt à Découvrir Nos Produits ?"
                 : "Ready to Discover Our Products?"}
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
