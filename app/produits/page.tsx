@@ -167,7 +167,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Bois Vert à Sécher" : "Green Wood to Season",
-      image: "/images/green-wood.svg",
+      image: "/images/green-wood.jpg",
       description:
         language === "fr"
           ? "Bois fraîchement coupé, mélange de feuillus. Pour séchage personnel. Prix avantageux pour commande anticipée. Livraison printemps pour séchage été."
