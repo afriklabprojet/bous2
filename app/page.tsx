@@ -218,57 +218,106 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-16 text-green-800">
-            {t.services.title}
-          </h2>
+      <section className="py-24 bg-linear-to-b from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-green-700 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-amber-700 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              {language === "fr" ? "NOS SERVICES" : "OUR SERVICES"}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-green-800">
+              {t.services.title}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {language === "fr"
+                ? "Des solutions professionnelles pour tous vos besoins"
+                : "Professional solutions for all your needs"}
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={
-                <svg
-                  className="w-16 h-16"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-                  />
-                </svg>
-              }
-              title={t.services.firewood.title}
-              description={t.services.firewood.description}
-            />
-            <ServiceCard
-              icon={
-                <svg
-                  className="w-16 h-16"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                  />
-                </svg>
-              }
-              title={t.services.delivery.title}
-              description={t.services.delivery.description}
-            />
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="group transform transition-all duration-300 hover:-translate-y-2">
+              <ServiceCard
+                icon={
+                  <svg
+                    className="w-16 h-16"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                    />
+                  </svg>
+                }
+                title={t.services.transport.title}
+                description={t.services.transport.description}
+              />
+            </div>
+            <div className="group transform transition-all duration-300 hover:-translate-y-2">
+              <ServiceCard
+                icon={
+                  <svg
+                    className="w-16 h-16"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+                    />
+                  </svg>
+                }
+                title={t.services.firewood.title}
+                description={t.services.firewood.description}
+              />
+            </div>
+            <div className="group transform transition-all duration-300 hover:-translate-y-2">
+              <ServiceCard
+                icon={
+                  <svg
+                    className="w-16 h-16"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                }
+                title={t.services.delivery.title}
+                description={t.services.delivery.description}
+              />
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <a
+              href="/services"
+              className="inline-block bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-800 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
+            >
+              {language === "fr" ? "En Savoir Plus" : "Learn More"}
+            </a>
           </div>
         </div>
       </section>

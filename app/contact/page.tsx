@@ -204,12 +204,16 @@ export default function ContactPage() {
                             ? "Lundi - Vendredi:"
                             : "Monday - Friday:"}
                         </span>{" "}
-                        {language === "fr" ? "8h00 - 17h00" : "8:00 AM - 5:00 PM"}
+                        {language === "fr"
+                          ? "8h00 - 17h00"
+                          : "8:00 AM - 5:00 PM"}
                         <br />
                         <span className="font-medium">
                           {language === "fr" ? "Samedi:" : "Saturday:"}
                         </span>{" "}
-                        {language === "fr" ? "9h00 - 12h00" : "9:00 AM - 12:00 PM"}
+                        {language === "fr"
+                          ? "9h00 - 12h00"
+                          : "9:00 AM - 12:00 PM"}
                         <br />
                         <span className="font-medium">
                           {language === "fr" ? "Dimanche:" : "Sunday:"}
@@ -257,7 +261,9 @@ export default function ContactPage() {
                 <div className="relative">
                   <div className="text-4xl mb-3">🛒</div>
                   <h3 className="text-2xl font-heading font-bold mb-3">
-                    {language === "fr" ? "Prêt à commander?" : "Ready to order?"}
+                    {language === "fr"
+                      ? "Prêt à commander?"
+                      : "Ready to order?"}
                   </h3>
                   <p className="mb-6 text-amber-50">
                     {language === "fr"
@@ -279,7 +285,9 @@ export default function ContactPage() {
                 <div className="relative">
                   <div className="text-4xl mb-3">🔥</div>
                   <h3 className="text-2xl font-heading font-bold mb-3">
-                    {language === "fr" ? "Découvrez nos produits" : "Discover our products"}
+                    {language === "fr"
+                      ? "Découvrez nos produits"
+                      : "Discover our products"}
                   </h3>
                   <p className="mb-6 text-green-50">
                     {language === "fr"
