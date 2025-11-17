@@ -122,7 +122,7 @@ export default function ServicesPage() {
                 : 'Our fast and reliable delivery service ensures you receive your firewood directly at home, with complete peace of mind.'}
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>{language === 'fr' ? 'Livraison dans tout le Saguenay-Lac-Saint-Jean' : 'Delivery throughout Saguenay-Lac-Saint-Jean'}</li>
+              <li>{language === 'fr' ? 'Livraison rapide et fiable' : 'Fast and reliable delivery'}</li>
               <li>{language === 'fr' ? 'Délais de livraison courts' : 'Short delivery times'}</li>
               <li>{language === 'fr' ? 'Empilage soigné et organisé' : 'Neat and organized stacking'}</li>
               <li>{language === 'fr' ? 'Service courtois et professionnel' : 'Courteous and professional service'}</li>
