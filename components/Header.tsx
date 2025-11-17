@@ -50,12 +50,6 @@ export default function Header() {
               {t.nav.products}
             </Link>
             <Link
-              href="/commande"
-              className="bg-amber-800 px-6 py-2 rounded-lg hover:bg-amber-900 transition-colors"
-            >
-              {t.nav.order}
-            </Link>
-            <Link
               href="/contact"
               className="hover:text-gray-200 transition-colors"
             >
@@ -134,12 +128,6 @@ export default function Header() {
               className="block hover:text-gray-200 transition-colors"
             >
               {t.nav.products}
-            </Link>
-            <Link
-              href="/commande"
-              className="block bg-amber-800 px-6 py-2 rounded-lg hover:bg-amber-900 transition-colors text-center"
-            >
-              {t.nav.order}
             </Link>
             <Link
               href="/contact"
