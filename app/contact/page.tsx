@@ -201,28 +201,6 @@ export default function ContactPage() {
                   : "Order your firewood now"}
               </p>
 
-              {/* Payment Info */}
-              <div className="mb-4 p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <p className="text-sm font-semibold flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  {language === "fr"
-                    ? "💳 Virement Interac accepté"
-                    : "💳 Interac Transfer Accepted"}
-                </p>
-              </div>
-
               <a
                 href="/commande"
                 className="inline-block bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors w-full text-center"

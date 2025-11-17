@@ -74,30 +74,6 @@ export default function OrderPage() {
                 </span>
               </li>
             </ul>
-
-            {/* Payment Info Badge */}
-            <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-              <div className="flex items-center justify-center space-x-2">
-                <svg
-                  className="w-5 h-5 text-green-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <p className="text-green-800 font-semibold">
-                  {language === "fr"
-                    ? "💳 Virement Interac accepté"
-                    : "💳 Interac Transfer Accepted"}
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Contact Info */}
