@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     const resend = getResend();
 
     // Send email to business
-    const { data, error } = await resend.emails.send({
+    const { error: businessError } = await resend.emails.send({
       from: process.env.EMAIL_FROM || "JSGC <contact@jsgc.store>",
       to: process.env.EMAIL_TO || "contact@jsgc.store",
       subject: `${
@@ -277,13 +277,13 @@ export async function POST(request: Request) {
       `,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    if (businessError) {
+      console.error("Resend error (business):", businessError);
+      return NextResponse.json({ error: businessError.message }, { status: 500 });
     }
 
     // Send confirmation email to customer
-    await resend.emails.send({
+    const { error: customerError } = await resend.emails.send({
       from: process.env.EMAIL_FROM || "JSGC <contact@jsgc.store>",
       to: email,
       subject: isEnglish
@@ -412,7 +412,12 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true, data });
+    if (customerError) {
+      console.error("Resend error (customer):", customerError);
+      // Don't fail the whole request if customer email fails
+    }
+
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
