@@ -113,7 +113,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Bois de Merisier" : "Yellow Birch Wood",
-      image: "/images/cherry-wood.svg",
+      image: "/images/cherry-wood.jpg",
       description:
         language === "fr"
           ? "Bois dur noble québécois, excellent pouvoir calorifique. Combustion lente et régulière. Prisé pour son odeur subtile et sa qualité exceptionnelle."
