@@ -7,6 +7,28 @@ import Image from "next/image";
 export default function ProductsPage() {
   const { language } = useLanguage();
 
+  return (
+    <div className="min-h-screen">
+      {/* Delivery Announcement Banner */}
+      <div className="bg-linear-to-r from-green-700 via-green-600 to-green-700 text-white py-4 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 text-center">
+            <span className="text-2xl">🚚</span>
+            <p className="text-lg md:text-xl font-bold">
+              {language === "fr"
+                ? "Livraison disponible dans la grande région de Québec !"
+                : "Delivery available in the greater Quebec City area!"}
+            </p>
+            <span className="text-2xl">📍</span>
+          </div>
+        </div>
+      </div>
+      <ProductsContent language={language} />
+    </div>
+  );
+}
+
+function ProductsContent({ language }: { language: string }) {
   const products = [
     {
       name: language === "fr" ? "Bois d'Érable Premium" : "Premium Maple Wood",
@@ -210,7 +232,9 @@ export default function ProductsPage() {
           ? "🔥 Combustion propre et efficace"
           : "🔥 Clean efficient combustion",
         language === "fr" ? "✨ Faible taux de cendres" : "✨ Low ash content",
-        language === "fr" ? "📦 Palette de 50 sacs (40 lb)" : "📦 50-bag pallet (40 lb)",
+        language === "fr"
+          ? "📦 Palette de 50 sacs (40 lb)"
+          : "📦 50-bag pallet (40 lb)",
         language === "fr"
           ? "♨️ Idéal poêles à granulés"
           : "♨️ Ideal for pellet stoves",

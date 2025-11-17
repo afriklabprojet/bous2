@@ -32,6 +32,21 @@ export default function ServicesPage() {
         </div>
       </div>
 
+      {/* Delivery Announcement Banner */}
+      <div className="bg-linear-to-r from-amber-500 via-amber-400 to-amber-500 text-white py-4 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 text-center">
+            <span className="text-2xl">🚚</span>
+            <p className="text-lg md:text-xl font-bold">
+              {language === "fr"
+                ? "Livraison disponible dans la grande région de Québec !"
+                : "Delivery available in the greater Quebec City area!"}
+            </p>
+            <span className="text-2xl">📍</span>
+          </div>
+        </div>
+      </div>
+
       {/* Trust Badges */}
       <div className="bg-gray-50 py-8 border-y border-gray-200">
         <div className="container mx-auto px-4">

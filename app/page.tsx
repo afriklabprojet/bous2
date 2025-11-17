@@ -13,6 +13,21 @@ export default function Home() {
     <>
       <Hero />
 
+      {/* Delivery Announcement Banner */}
+      <div className="bg-linear-to-r from-green-700 via-green-600 to-green-700 text-white py-4 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 text-center">
+            <span className="text-2xl">🚚</span>
+            <p className="text-lg md:text-xl font-bold">
+              {language === "fr"
+                ? "Livraison disponible dans la grande région de Québec !"
+                : "Delivery available in the greater Quebec City area!"}
+            </p>
+            <span className="text-2xl">📍</span>
+          </div>
+        </div>
+      </div>
+
       {/* Featured Products Section */}
       <section className="py-20 bg-linear-to-b from-white to-gray-50 relative overflow-hidden">
         {/* Decorative elements */}
@@ -124,9 +139,9 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
-                <span className="text-4xl font-bold text-blue-800">150$</span>
+                <span className="text-4xl font-bold text-blue-800">120$</span>
                 <span className="text-gray-500 text-sm">
-                  / {language === "fr" ? "corde" : "cord"}
+                  / {language === "fr" ? "corde livrée" : "delivered cord"}
                 </span>
               </div>
               <Link
@@ -172,9 +187,9 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
-                <span className="text-4xl font-bold text-green-800">130$</span>
+                <span className="text-4xl font-bold text-green-800">95$</span>
                 <span className="text-gray-500 text-sm">
-                  / {language === "fr" ? "corde" : "cord"}
+                  / {language === "fr" ? "corde livrée" : "delivered cord"}
                 </span>
               </div>
               <Link
