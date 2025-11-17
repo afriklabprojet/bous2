@@ -176,28 +176,6 @@ export default function Home() {
               : "Order your firewood today and enjoy fast delivery"}
           </p>
 
-          {/* Payment Badge */}
-          <div className="inline-block mb-6 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <p className="text-sm font-semibold flex items-center">
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              {language === "fr"
-                ? "💳 Paiement par virement Interac accepté"
-                : "💳 Interac Transfer Payment Accepted"}
-            </p>
-          </div>
-
           <div>
             <Link
               href="/commande"
