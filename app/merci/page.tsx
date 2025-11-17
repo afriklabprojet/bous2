@@ -21,6 +21,10 @@ function ThankYouContent() {
   const paymentMethod = searchParams?.get("paymentMethod") || "";
   const deliveryDate = searchParams?.get("deliveryDate") || "";
   const notes = searchParams?.get("notes") || "";
+  const total = searchParams?.get("total") || "";
+  const subtotal = searchParams?.get("subtotal") || "";
+  const tps = searchParams?.get("tps") || "";
+  const tvq = searchParams?.get("tvq") || "";
 
   // Wood type translations
   const woodTypes: { [key: string]: { fr: string; en: string } } = {
@@ -189,6 +193,46 @@ function ThankYouContent() {
             </div>
           </div>
 
+          {/* Price Summary */}
+          {total && (
+            <div className="bg-linear-to-r from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-200 mb-8">
+              <h3 className="text-xl font-bold text-green-800 mb-4 flex items-center gap-2">
+                <span>💰</span>
+                {language === "fr" ? "Montant à Payer" : "Amount to Pay"}
+              </h3>
+              <div className="space-y-2 bg-white rounded-lg p-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-600">
+                    {language === "fr" ? "Sous-total" : "Subtotal"}:
+                  </span>
+                  <span className="font-semibold">{subtotal} $</span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-500">TPS (5%):</span>
+                  <span className="text-gray-500">{tps} $</span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-500">TVQ (9.975%):</span>
+                  <span className="text-gray-500">{tvq} $</span>
+                </div>
+                <div className="flex justify-between pt-3 border-t-2 border-green-300">
+                  <span className="text-xl font-bold text-green-800">
+                    {language === "fr" ? "TOTAL" : "TOTAL"}:
+                  </span>
+                  <span className="text-3xl font-bold text-green-800">
+                    {total} $
+                  </span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mt-4 bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
+                💡{" "}
+                {language === "fr"
+                  ? "Ce montant doit être envoyé par virement Interac"
+                  : "This amount must be sent by Interac transfer"}
+              </p>
+            </div>
+          )}
+
           {/* Payment Instructions */}
           <div className="bg-linear-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-300 mb-8">
             <h3 className="text-xl font-bold mb-4 text-amber-800 flex items-center gap-2">
@@ -205,7 +249,9 @@ function ThankYouContent() {
               </p>
               <div className="bg-green-700 text-white rounded-xl p-6 text-center mb-4">
                 <p className="text-sm mb-2 opacity-90">
-                  {language === "fr" ? "Adresse email Interac" : "Interac email address"}
+                  {language === "fr"
+                    ? "Adresse email Interac"
+                    : "Interac email address"}
                 </p>
                 <p className="text-2xl md:text-3xl font-bold">
                   📧 contact@jsgc.store

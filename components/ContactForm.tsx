@@ -1,7 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useLanguage } from "@/lib/language-context";
+
+// Prix par corde/palette
+const WOOD_PRICES: { [key: string]: number } = {
+  maple: 130,
+  birch: 120,
+  mixed: 95,
+  cherry: 140,
+  ash: 115,
+  green: 80,
+  premium: 125,
+  whiteAsh: 125,
+  yellowBirch: 145,
+  pellets: 260, // par palette
+};
 
 export default function ContactForm() {
   const { t, language } = useLanguage();
@@ -23,6 +37,25 @@ export default function ContactForm() {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+
+  // Calcul du total avec taxes
+  const priceCalculation = useMemo(() => {
+    const qty = parseInt(formData.quantity) || 0;
+    const unitPrice = WOOD_PRICES[formData.woodType] || 0;
+    const subtotal = unitPrice * qty;
+    const tps = subtotal * 0.05; // TPS 5%
+    const tvq = subtotal * 0.09975; // TVQ 9.975%
+    const total = subtotal + tps + tvq;
+
+    return {
+      unitPrice,
+      quantity: qty,
+      subtotal,
+      tps,
+      tvq,
+      total,
+    };
+  }, [formData.woodType, formData.quantity]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,6 +90,10 @@ export default function ContactForm() {
           paymentMethod: formData.paymentMethod,
           deliveryDate: formData.deliveryDate,
           notes: formData.notes,
+          total: priceCalculation.total.toFixed(2),
+          subtotal: priceCalculation.subtotal.toFixed(2),
+          tps: priceCalculation.tps.toFixed(2),
+          tvq: priceCalculation.tvq.toFixed(2),
         });
         window.location.href = `/merci?${params.toString()}`;
       } else {
@@ -389,6 +426,74 @@ ${
               />
             </div>
           </div>
+
+          {/* Price Summary */}
+          {priceCalculation.quantity > 0 && (
+            <div className="mt-6 bg-linear-to-r from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-200">
+              <h3 className="text-lg font-bold text-green-800 mb-4 flex items-center gap-2">
+                <span>💰</span>
+                {language === "fr" ? "Calcul du Prix" : "Price Calculation"}
+              </h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">
+                    {language === "fr" ? "Prix unitaire" : "Unit price"}:
+                  </span>
+                  <span className="font-semibold">
+                    {priceCalculation.unitPrice.toFixed(2)} $
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">
+                    {language === "fr" ? "Quantité" : "Quantity"}:
+                  </span>
+                  <span className="font-semibold">
+                    × {priceCalculation.quantity}
+                  </span>
+                </div>
+                <div className="flex justify-between pt-2 border-t border-green-200">
+                  <span className="text-gray-600">
+                    {language === "fr" ? "Sous-total" : "Subtotal"}:
+                  </span>
+                  <span className="font-semibold">
+                    {priceCalculation.subtotal.toFixed(2)} $
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600 text-xs">
+                    TPS (5%):
+                  </span>
+                  <span className="text-gray-600 text-xs">
+                    {priceCalculation.tps.toFixed(2)} $
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600 text-xs">
+                    TVQ (9.975%):
+                  </span>
+                  <span className="text-gray-600 text-xs">
+                    {priceCalculation.tvq.toFixed(2)} $
+                  </span>
+                </div>
+                <div className="flex justify-between pt-3 border-t-2 border-green-300">
+                  <span className="text-lg font-bold text-green-800">
+                    {language === "fr" ? "TOTAL À PAYER" : "TOTAL TO PAY"}:
+                  </span>
+                  <span className="text-2xl font-bold text-green-800">
+                    {priceCalculation.total.toFixed(2)} $
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 mt-4 flex items-start gap-1">
+                <span>💳</span>
+                <span>
+                  {language === "fr"
+                    ? "Ce montant doit être envoyé par virement Interac à : contact@jsgc.store"
+                    : "This amount must be sent by Interac transfer to: contact@jsgc.store"}
+                </span>
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Section: Payment & Notes */}
