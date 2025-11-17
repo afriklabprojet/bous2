@@ -21,11 +21,13 @@ Ce projet utilise [Resend](https://resend.com) pour envoyer des emails professio
 ### 3. Configurer le domaine (Optionnel mais recommandé)
 
 #### Option A: Utiliser le domaine de test (pour développement)
+
 - Resend fournit un domaine de test par défaut
 - Les emails seront envoyés depuis `onboarding@resend.dev`
 - Limité à votre email vérifié
 
 #### Option B: Utiliser votre propre domaine (production)
+
 1. Allez sur [resend.com/domains](https://resend.com/domains)
 2. Cliquez sur "Add Domain"
 3. Entrez votre domaine : `jsgc.store`
@@ -82,6 +84,7 @@ EMAIL_TO = contact@jsgc.store
 ### Emails envoyés automatiquement :
 
 1. **Email à l'entreprise (JSGC)** :
+
    - Notification de nouvelle commande
    - Toutes les informations du client
    - Adresse de livraison complète
@@ -94,6 +97,7 @@ EMAIL_TO = contact@jsgc.store
    - Coordonnées de contact
 
 ### Design professionnel :
+
 - ✅ Templates HTML responsive
 - ✅ Branding JSGC (couleurs vertes)
 - ✅ Compatible tous clients email
@@ -120,6 +124,7 @@ npm run dev
 - **Support de base**
 
 Si vous dépassez ces limites, considérez le plan Pro ($20/mois) :
+
 - 50,000 emails/mois
 - Domaines illimités
 - Support prioritaire
@@ -127,15 +132,18 @@ Si vous dépassez ces limites, considérez le plan Pro ($20/mois) :
 ## 🔧 Dépannage
 
 ### Erreur: "API key not found"
+
 - Vérifiez que `RESEND_API_KEY` est bien défini dans `.env.local`
 - Redémarrez le serveur de développement
 
 ### Emails non reçus
+
 - Vérifiez les spams
 - Vérifiez que le domaine est vérifié (si vous utilisez votre propre domaine)
 - Consultez les logs Resend : [resend.com/logs](https://resend.com/logs)
 
 ### Erreur 429 (Too Many Requests)
+
 - Vous avez atteint la limite de 100 emails/jour
 - Attendez 24h ou passez au plan Pro
 
@@ -148,6 +156,7 @@ Si vous dépassez ces limites, considérez le plan Pro ($20/mois) :
 ## 🆘 Support
 
 Pour toute question :
+
 - Documentation Resend : [resend.com/docs](https://resend.com/docs)
 - Support Resend : [resend.com/support](https://resend.com/support)
 - Email : contact@jsgc.store

@@ -69,8 +69,8 @@ export default function OrderPage() {
                 <span className="text-green-700 mr-3">•</span>
                 <span>
                   {language === "fr"
-                    ? "Paiement accepté: Comptant, virement Interac, chèque"
-                    : "Payment accepted: Cash, Interac transfer, check"}
+                    ? "Paiement accepté: Virement Interac"
+                    : "Payment accepted: Interac transfer"}
                 </span>
               </li>
             </ul>

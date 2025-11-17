@@ -44,7 +44,7 @@ Value: contact@jsgc.store
 7. Cliquez sur **Add a variable** et ajoutez :
 
 ```
-Variable: EMAIL_TO  
+Variable: EMAIL_TO
 Value: contact@jsgc.store
 ```
 
@@ -73,6 +73,7 @@ Votre site envoie maintenant des emails professionnels automatiquement!
 ## 📧 Emails Envoyés
 
 ### Pour l'entreprise (contact@jsgc.store):
+
 - ✅ Notification de nouvelle commande
 - ✅ Toutes les infos client
 - ✅ Adresse de livraison complète
@@ -80,6 +81,7 @@ Votre site envoie maintenant des emails professionnels automatiquement!
 - ✅ Design professionnel avec logo
 
 ### Pour le client:
+
 - ✅ Confirmation de commande
 - ✅ Résumé de leur commande
 - ✅ Vos coordonnées de contact
@@ -103,6 +105,7 @@ Pour envoyer depuis `contact@jsgc.store` au lieu de `onboarding@resend.dev`:
 Allez chez votre hébergeur de domaine et ajoutez:
 
 **Enregistrement SPF (TXT):**
+
 ```
 Type: TXT
 Nom: @
@@ -110,13 +113,15 @@ Valeur: v=spf1 include:amazonses.com ~all
 ```
 
 **Enregistrement DKIM (TXT):**
+
 ```
-Type: TXT  
+Type: TXT
 Nom: [fourni par Resend]
 Valeur: [fourni par Resend]
 ```
 
 **Enregistrement MX:**
+
 ```
 Type: MX
 Priorité: 10
@@ -136,7 +141,7 @@ Valeur: feedback-smtp.us-east-1.amazonses.com
 Consultez vos envois sur: **https://resend.com/logs**
 
 - Emails envoyés
-- Emails ouverts  
+- Emails ouverts
 - Erreurs éventuelles
 
 ---
@@ -144,15 +149,18 @@ Consultez vos envois sur: **https://resend.com/logs**
 ## 🆘 Problèmes?
 
 ### ❌ "API key not found"
+
 - Vérifiez que `RESEND_API_KEY` est bien dans les variables Netlify
 - Redéployez le site
 
 ### ❌ Emails non reçus
+
 - Vérifiez les **spams**
 - Vérifiez les logs Resend: https://resend.com/logs
 - Assurez-vous que votre email est vérifié
 
 ### ❌ Erreur 429
+
 - Limite de 100 emails/jour atteinte
 - Attendez 24h ou passez au plan Pro ($20/mois)
 
@@ -161,12 +169,14 @@ Consultez vos envois sur: **https://resend.com/logs**
 ## 💰 Prix Resend
 
 **Plan Gratuit (actuel):**
+
 - ✅ 100 emails/jour
 - ✅ 1 domaine
 - ✅ Support de base
 - **GRATUIT**
 
 **Plan Pro (si besoin):**
+
 - ✅ 50,000 emails/mois
 - ✅ Domaines illimités
 - ✅ Support prioritaire

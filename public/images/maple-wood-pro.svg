@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Wood texture pattern -->
+    <pattern id="woodGrain" x="0" y="0" width="4" height="100" patternUnits="userSpaceOnUse">
+      <line x1="1" y1="0" x2="1" y2="100" stroke="#654321" stroke-width="0.3" opacity="0.3"/>
+      <line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#654321" stroke-width="0.2" opacity="0.2"/>
+    </pattern>
+    
+    <!-- Maple wood gradient - rich brown tones -->
+    <radialGradient id="mapleGrad1" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#b8906d;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#8b6f47;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5c4033;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="mapleGrad2" cx="45%" cy="45%">
+      <stop offset="0%" style="stop-color:#c9a87e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9d7a54;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d4c41;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Log end with realistic rings -->
+    <radialGradient id="mapleEnd" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#f5deb3;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#daa520;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#b8906d;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#8b6f47;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Shadow filters -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="3" dy="5" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="innerShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="2"/>
+      <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+    </filter>
+    
+    <!-- Bark texture -->
+    <pattern id="barkTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#3e2723"/>
+      <path d="M0,5 Q5,3 10,5 T20,5" stroke="#4e342e" stroke-width="1" fill="none" opacity="0.6"/>
+      <path d="M0,12 Q5,10 10,12 T20,12" stroke="#5d4037" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <circle cx="3" cy="7" r="0.5" fill="#6d4c41" opacity="0.7"/>
+      <circle cx="15" cy="14" r="0.7" fill="#6d4c41" opacity="0.6"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <radialGradient id="bg" cx="50%" cy="50%">
+    <stop offset="0%" style="stop-color:#fdf8f3;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#f5ebe0;stop-opacity:1" />
+  </radialGradient>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="520" rx="320" ry="40" fill="#000" opacity="0.08"/>
+  
+  <g filter="url(#softShadow)">
+    <!-- Back row logs -->
+    <!-- Log 1 -->
+    <g>
+      <rect x="80" y="180" width="140" height="200" fill="url(#mapleGrad1)" rx="3"/>
+      <rect x="80" y="180" width="140" height="200" fill="url(#woodGrain)" rx="3"/>
+      <rect x="80" y="180" width="140" height="200" fill="url(#barkTexture)" opacity="0.15" rx="3"/>
+      <ellipse cx="150" cy="380" rx="70" ry="35" fill="url(#mapleEnd)"/>
+      <!-- Growth rings -->
+      <ellipse cx="150" cy="380" rx="60" ry="30" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.4"/>
+      <ellipse cx="150" cy="380" rx="48" ry="24" fill="none" stroke="#654321" stroke-width="1.2" opacity="0.5"/>
+      <ellipse cx="150" cy="380" rx="36" ry="18" fill="none" stroke="#654321" stroke-width="1" opacity="0.6"/>
+      <ellipse cx="150" cy="380" rx="24" ry="12" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <ellipse cx="150" cy="380" rx="12" ry="6" fill="none" stroke="#4a3228" stroke-width="2" opacity="0.8"/>
+      <!-- Wood cracks -->
+      <path d="M150,350 L155,370" stroke="#3e2723" stroke-width="0.8" opacity="0.6"/>
+      <path d="M140,355 L143,375" stroke="#3e2723" stroke-width="0.6" opacity="0.5"/>
+    </g>
+    
+    <!-- Log 2 -->
+    <g>
+      <rect x="260" y="170" width="150" height="210" fill="url(#mapleGrad2)" rx="3"/>
+      <rect x="260" y="170" width="150" height="210" fill="url(#woodGrain)" rx="3"/>
+      <rect x="260" y="170" width="150" height="210" fill="url(#barkTexture)" opacity="0.12" rx="3"/>
+      <ellipse cx="335" cy="380" rx="75" ry="38" fill="url(#mapleEnd)"/>
+      <ellipse cx="335" cy="380" rx="65" ry="33" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.4"/>
+      <ellipse cx="335" cy="380" rx="52" ry="26" fill="none" stroke="#654321" stroke-width="1.2" opacity="0.5"/>
+      <ellipse cx="335" cy="380" rx="39" ry="19" fill="none" stroke="#654321" stroke-width="1" opacity="0.6"/>
+      <ellipse cx="335" cy="380" rx="26" ry="13" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <path d="M335,345 L338,372" stroke="#3e2723" stroke-width="0.9" opacity="0.6"/>
+    </g>
+    
+    <!-- Log 3 -->
+    <g>
+      <rect x="450" y="175" width="145" height="205" fill="url(#mapleGrad1)" rx="3"/>
+      <rect x="450" y="175" width="145" height="205" fill="url(#woodGrain)" rx="3"/>
+      <rect x="450" y="175" width="145" height="205" fill="url(#barkTexture)" opacity="0.14" rx="3"/>
+      <ellipse cx="522" cy="380" rx="72" ry="36" fill="url(#mapleEnd)"/>
+      <ellipse cx="522" cy="380" rx="62" ry="31" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.4"/>
+      <ellipse cx="522" cy="380" rx="50" ry="25" fill="none" stroke="#654321" stroke-width="1.2" opacity="0.5"/>
+      <ellipse cx="522" cy="380" rx="38" ry="19" fill="none" stroke="#654321" stroke-width="1" opacity="0.6"/>
+      <ellipse cx="522" cy="380" rx="25" ry="12" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <path d="M515,352 L518,375" stroke="#3e2723" stroke-width="0.7" opacity="0.6"/>
+      <path d="M528,348 L530,373" stroke="#3e2723" stroke-width="0.8" opacity="0.5"/>
+    </g>
+    
+    <!-- Log 4 -->
+    <g>
+      <rect x="630" y="185" width="135" height="195" fill="url(#mapleGrad2)" rx="3"/>
+      <rect x="630" y="185" width="135" height="195" fill="url(#woodGrain)" rx="3"/>
+      <rect x="630" y="185" width="135" height="195" fill="url(#barkTexture)" opacity="0.13" rx="3"/>
+      <ellipse cx="697" cy="380" rx="67" ry="34" fill="url(#mapleEnd)"/>
+      <ellipse cx="697" cy="380" rx="58" ry="29" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.4"/>
+      <ellipse cx="697" cy="380" rx="47" ry="23" fill="none" stroke="#654321" stroke-width="1.2" opacity="0.5"/>
+      <ellipse cx="697" cy="380" rx="35" ry="17" fill="none" stroke="#654321" stroke-width="1" opacity="0.6"/>
+      <ellipse cx="697" cy="380" rx="23" ry="11" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <path d="M690,355 L693,375" stroke="#3e2723" stroke-width="0.8" opacity="0.6"/>
+    </g>
+    
+    <!-- Front row logs for depth -->
+    <!-- Log 5 (front left) -->
+    <g>
+      <rect x="50" y="300" width="160" height="180" fill="url(#mapleGrad1)" rx="3"/>
+      <rect x="50" y="300" width="160" height="180" fill="url(#woodGrain)" rx="3"/>
+      <rect x="50" y="300" width="160" height="180" fill="url(#barkTexture)" opacity="0.16" rx="3"/>
+      <ellipse cx="130" cy="480" rx="80" ry="40" fill="url(#mapleEnd)"/>
+      <ellipse cx="130" cy="480" rx="70" ry="35" fill="none" stroke="#654321" stroke-width="2" opacity="0.5"/>
+      <ellipse cx="130" cy="480" rx="55" ry="27" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+      <ellipse cx="130" cy="480" rx="40" ry="20" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <ellipse cx="130" cy="480" rx="25" ry="12" fill="none" stroke="#4a3228" stroke-width="2" opacity="0.8"/>
+      <path d="M120,445 L125,475" stroke="#3e2723" stroke-width="1" opacity="0.7"/>
+      <path d="M140,450 L143,478" stroke="#3e2723" stroke-width="0.9" opacity="0.6"/>
+    </g>
+    
+    <!-- Log 6 (front right) -->
+    <g>
+      <rect x="590" y="310" width="155" height="170" fill="url(#mapleGrad2)" rx="3"/>
+      <rect x="590" y="310" width="155" height="170" fill="url(#woodGrain)" rx="3"/>
+      <rect x="590" y="310" width="155" height="170" fill="url(#barkTexture)" opacity="0.15" rx="3"/>
+      <ellipse cx="667" cy="480" rx="77" ry="38" fill="url(#mapleEnd)"/>
+      <ellipse cx="667" cy="480" rx="67" ry="33" fill="none" stroke="#654321" stroke-width="2" opacity="0.5"/>
+      <ellipse cx="667" cy="480" rx="52" ry="26" fill="none" stroke="#654321" stroke-width="1.5" opacity="0.6"/>
+      <ellipse cx="667" cy="480" rx="37" ry="18" fill="none" stroke="#5c4033" stroke-width="1.5" opacity="0.7"/>
+      <ellipse cx="667" cy="480" rx="22" ry="11" fill="none" stroke="#4a3228" stroke-width="2" opacity="0.8"/>
+      <path d="M660,448 L663,476" stroke="#3e2723" stroke-width="1" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Premium badge -->
+  <g transform="translate(680, 60)">
+    <circle cx="0" cy="0" r="50" fill="#8b6f47" opacity="0.95" filter="url(#softShadow)"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#f5deb3" stroke-width="2" opacity="0.6"/>
+    <text x="0" y="-8" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f5deb3" text-anchor="middle">ÉRABLE</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="13" fill="#f5deb3" text-anchor="middle">PREMIUM</text>
+    <path d="M -12,-25 L -8,-18 L 0,-15 L 8,-18 L 12,-25 L 8,-20 L 0,-23 L -8,-20 Z" fill="#daa520" opacity="0.9"/>
+  </g>
+  
+  <!-- Product label -->
+  <g transform="translate(400, 560)">
+    <rect x="-120" y="-20" width="240" height="35" fill="#654321" opacity="0.9" rx="5"/>
+    <text x="0" y="5" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f5deb3" text-anchor="middle">Bois d'Érable Premium</text>
+  </g>
+</svg>
