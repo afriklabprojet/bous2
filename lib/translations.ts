@@ -102,7 +102,7 @@ export const translations: Record<Language, Translation> = {
       delivery: {
         title: "Livraison",
         description:
-          "Livraison rapide à domicile dans tout le Saguenay-Lac-Saint-Jean.",
+          "Livraison rapide et fiable directement à votre domicile.",
       },
     },
     contact: {
@@ -174,7 +174,7 @@ export const translations: Record<Language, Translation> = {
       },
       delivery: {
         title: "Delivery",
-        description: "Fast home delivery throughout Saguenay-Lac-Saint-Jean.",
+        description: "Fast and reliable delivery directly to your home.",
       },
     },
     contact: {
