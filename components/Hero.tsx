@@ -44,7 +44,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            href="/commande"
+            href="/produits"
             className="group relative bg-amber-800 hover:bg-amber-900 text-white px-10 py-5 rounded-xl text-lg font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-800/50 hover:-translate-y-1 min-w-[200px]"
           >
             <span className="relative z-10">{t.hero.cta}</span>

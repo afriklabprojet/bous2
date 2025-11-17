@@ -101,8 +101,7 @@ export const translations: Record<Language, Translation> = {
       },
       delivery: {
         title: "Livraison",
-        description:
-          "Livraison rapide et fiable directement à votre domicile.",
+        description: "Livraison rapide et fiable directement à votre domicile.",
       },
     },
     contact: {
