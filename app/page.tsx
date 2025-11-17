@@ -109,7 +109,7 @@ export default function Home() {
               </div>
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gray-50">
                 <Image
-                  src="/images/birch-wood.svg"
+                  src="/images/birch-wood.jpg"
                   alt="Bouleau Blanc"
                   fill
                   className="object-cover"

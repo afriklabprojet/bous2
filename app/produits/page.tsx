@@ -58,7 +58,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Bois de Bouleau Blanc" : "White Birch Wood",
-      image: "/images/birch-wood.svg",
+      image: "/images/birch-wood.jpg",
       description:
         language === "fr"
           ? "Bois franc réputé pour son odeur agréable et son écorce blanche distinctive. Parfait pour une ambiance chaleureuse. Séchage naturel 12-18 mois."
