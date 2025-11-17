@@ -421,8 +421,6 @@ ${
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent"
             >
               <option value="interac">{t.order.paymentMethods.interac}</option>
-              <option value="cash">{t.order.paymentMethods.cash}</option>
-              <option value="check">{t.order.paymentMethods.check}</option>
             </select>
           </div>
 
