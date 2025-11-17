@@ -1,7 +1,14 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only when the API is called, not at build time
+const getResend = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+  return new Resend(apiKey);
+};
 
 export async function POST(request: Request) {
   try {
@@ -39,6 +46,9 @@ export async function POST(request: Request) {
     }
 
     const isEnglish = language === "en";
+
+    // Initialize Resend client
+    const resend = getResend();
 
     // Send email to business
     const { data, error } = await resend.emails.send({
