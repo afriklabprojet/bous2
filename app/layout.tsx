@@ -18,6 +18,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://jsgc.netlify.app"
+  ),
   title: "Transport et Bois de Chauffage JSGC | Livraison de bois au Québec",
   description:
     "Entreprise de transport et de vente de bois de chauffage à Ferland-et-Boilleau. Livraison rapide et fiable dans tout le Québec.",
@@ -61,17 +64,20 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  themeColor: "#2E7D32",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   robots: {
     index: true,
     follow: true,
   },
 };
+
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    themeColor: "#2E7D32",
+  };
+}
 
 export default function RootLayout({
   children,
