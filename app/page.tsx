@@ -13,89 +13,160 @@ export default function Home() {
       <Hero />
 
       {/* Featured Products Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+        
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-green-800">
-              {language === "fr" ? "Nos Produits Vedettes" : "Our Featured Products"}
+          <div className="text-center mb-16 animate-[slide-up_0.6s_ease-out]">
+            <div className="inline-block mb-4 px-6 py-2 bg-green-700 text-white rounded-full text-sm font-bold">
+              ⭐ {language === "fr" ? "MEILLEURS VENTES" : "BEST SELLERS"}
+            </div>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-green-800">
+              {language === "fr"
+                ? "Bois de Chauffage Premium"
+                : "Premium Firewood"}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {language === "fr" 
-                ? "Découvrez notre sélection de bois de chauffage premium, séché et prêt à brûler"
-                : "Discover our selection of premium firewood, dried and ready to burn"}
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              {language === "fr"
+                ? "Séché naturellement, prêt à brûler immédiatement. Profitez d'une chaleur constante et durable tout l'hiver ❄️🔥"
+                : "Naturally dried, ready to burn immediately. Enjoy consistent and lasting warmth all winter long ❄️🔥"}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Érable Premium */}
-            <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-200 hover:border-amber-400 transition-all hover:shadow-xl">
-              <div className="text-5xl mb-4">🔥</div>
-              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800">
+            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-amber-400 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                🔥 {language === "fr" ? "POPULAIRE" : "POPULAR"}
+              </div>
+              <div className="text-6xl mb-6 text-center">🔥</div>
+              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Érable Premium" : "Premium Maple"}
               </h3>
-              <p className="text-gray-700 mb-4">
-                {language === "fr"
-                  ? "Notre meilleur bois, haute densité, chaleur intense et durable"
-                  : "Our best wood, high density, intense and lasting heat"}
-              </p>
-              <div className="text-3xl font-bold text-amber-800 mb-4">160$</div>
+              <ul className="text-gray-700 mb-6 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Haute densité énergétique" : "High energy density"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Chaleur intense" : "Intense heat"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Brûle longtemps" : "Long burning"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Peu de fumée" : "Low smoke"}
+                </li>
+              </ul>
+              <div className="flex items-baseline justify-center gap-2 mb-6">
+                <span className="text-4xl font-bold text-amber-800">160$</span>
+                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+              </div>
               <Link
                 href="/produits"
-                className="block w-full text-center bg-amber-800 hover:bg-amber-900 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="block w-full text-center bg-amber-800 hover:bg-amber-900 text-white px-6 py-4 rounded-xl font-bold transition-all group-hover:scale-105 shadow-lg"
               >
-                {language === "fr" ? "Voir détails" : "View details"}
+                {language === "fr" ? "🛒 Commander" : "🛒 Order Now"}
               </Link>
             </div>
 
             {/* Bouleau Blanc */}
-            <div className="bg-linear-to-br from-blue-50 to-slate-50 rounded-2xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all hover:shadow-xl">
-              <div className="text-5xl mb-4">🪵</div>
-              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800">
+            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-blue-400 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                ⭐ {language === "fr" ? "QUALITÉ" : "QUALITY"}
+              </div>
+              <div className="text-6xl mb-6 text-center">🪵</div>
+              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Bouleau Blanc" : "White Birch"}
               </h3>
-              <p className="text-gray-700 mb-4">
-                {language === "fr"
-                  ? "Excellent rapport qualité-prix, brûle proprement avec peu de résidus"
-                  : "Excellent value, burns cleanly with minimal residue"}
-              </p>
-              <div className="text-3xl font-bold text-blue-800 mb-4">150$</div>
+              <ul className="text-gray-700 mb-6 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Excellent rapport qualité-prix" : "Excellent value"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Combustion propre" : "Clean burning"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Peu de résidus" : "Minimal residue"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Facile à allumer" : "Easy to ignite"}
+                </li>
+              </ul>
+              <div className="flex items-baseline justify-center gap-2 mb-6">
+                <span className="text-4xl font-bold text-blue-800">150$</span>
+                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+              </div>
               <Link
                 href="/produits"
-                className="block w-full text-center bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="block w-full text-center bg-blue-800 hover:bg-blue-900 text-white px-6 py-4 rounded-xl font-bold transition-all group-hover:scale-105 shadow-lg"
               >
-                {language === "fr" ? "Voir détails" : "View details"}
+                {language === "fr" ? "🛒 Commander" : "🛒 Order Now"}
               </Link>
             </div>
 
             {/* Mélangé */}
-            <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200 hover:border-green-400 transition-all hover:shadow-xl">
-              <div className="text-5xl mb-4">🌲</div>
-              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800">
+            <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-green-400 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                💰 {language === "fr" ? "ÉCONOMIQUE" : "VALUE"}
+              </div>
+              <div className="text-6xl mb-6 text-center">🌲</div>
+              <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Bois Mélangé" : "Mixed Wood"}
               </h3>
-              <p className="text-gray-700 mb-4">
-                {language === "fr"
-                  ? "Solution économique, mélange équilibré de feuillus"
-                  : "Economical solution, balanced mix of hardwoods"}
-              </p>
-              <div className="text-3xl font-bold text-green-800 mb-4">130$</div>
+              <ul className="text-gray-700 mb-6 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Meilleur prix" : "Best price"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Mélange équilibré" : "Balanced mix"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Bon rendement" : "Good performance"}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span> {language === "fr" ? "Usage quotidien" : "Daily use"}
+                </li>
+              </ul>
+              <div className="flex items-baseline justify-center gap-2 mb-6">
+                <span className="text-4xl font-bold text-green-800">130$</span>
+                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+              </div>
               <Link
                 href="/produits"
-                className="block w-full text-center bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="block w-full text-center bg-green-800 hover:bg-green-900 text-white px-6 py-4 rounded-xl font-bold transition-all group-hover:scale-105 shadow-lg"
               >
-                {language === "fr" ? "Voir détails" : "View details"}
+                {language === "fr" ? "🛒 Commander" : "🛒 Order Now"}
               </Link>
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center bg-linear-to-r from-green-50 to-amber-50 rounded-2xl p-8 border-2 border-dashed border-green-300">
+            <p className="text-lg text-gray-700 mb-4 font-semibold">
+              {language === "fr"
+                ? "🌟 Plus de 10 types de bois disponibles !"
+                : "🌟 More than 10 types of wood available!"}
+            </p>
             <Link
               href="/produits"
-              className="inline-flex items-center gap-2 text-green-800 hover:text-green-900 font-semibold text-lg group"
+              className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
             >
-              {language === "fr" ? "Voir tous nos produits" : "See all our products"}
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              {language === "fr"
+                ? "Découvrir tous nos produits"
+                : "Discover all our products"}
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
               </svg>
             </Link>
           </div>
@@ -158,76 +229,113 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Indicators */}
+      <section className="py-16 bg-green-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-5xl font-bold mb-2">500+</div>
+              <p className="text-green-100">{language === "fr" ? "Clients Satisfaits" : "Happy Customers"}</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">15+</div>
+              <p className="text-green-100">{language === "fr" ? "Années d'Expérience" : "Years Experience"}</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">100%</div>
+              <p className="text-green-100">{language === "fr" ? "Bois Séché Naturellement" : "Naturally Dried Wood"}</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">24h</div>
+              <p className="text-green-100">{language === "fr" ? "Livraison Rapide" : "Fast Delivery"}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-heading font-bold mb-8 text-green-800">
-              {language === "fr" ? "Pourquoi nous choisir?" : "Why Choose Us?"}
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-green-800">
+              {language === "fr" ? "Pourquoi Choisir JSGC?" : "Why Choose JSGC?"}
             </h2>
+            <p className="text-xl text-gray-600 mb-12">
+              {language === "fr"
+                ? "Votre partenaire de confiance pour un hiver au chaud"
+                : "Your trusted partner for a warm winter"}
+            </p>
             <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="flex items-start space-x-4">
-                <div className="shrink-0 w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {language === "fr"
-                      ? "Qualité Supérieure"
-                      : "Superior Quality"}
-                  </h3>
-                  <p className="text-gray-600">
-                    {language === "fr"
-                      ? "Bois de chauffage sélectionné et séché pour une combustion optimale"
-                      : "Selected and dried firewood for optimal combustion"}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="shrink-0 w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}
-                  </h3>
-                  <p className="text-gray-600">
-                    {language === "fr"
-                      ? "Service de livraison fiable dans tout le Saguenay-Lac-Saint-Jean"
-                      : "Reliable delivery service throughout Saguenay-Lac-Saint-Jean"}
-                  </p>
+              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0 w-14 h-14 bg-green-700 rounded-2xl flex items-center justify-center text-white text-2xl">
+                    🏆
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-semibold mb-2 text-green-800">
+                      {language === "fr"
+                        ? "Qualité Garantie"
+                        : "Guaranteed Quality"}
+                    </h3>
+                    <p className="text-gray-600">
+                      {language === "fr"
+                        ? "Bois sélectionné, séché naturellement, prêt à utiliser immédiatement"
+                        : "Selected wood, naturally dried, ready to use immediately"}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="shrink-0 w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {language === "fr"
-                      ? "Prix Compétitifs"
-                      : "Competitive Prices"}
-                  </h3>
-                  <p className="text-gray-600">
-                    {language === "fr"
-                      ? "Meilleur rapport qualité-prix de la région"
-                      : "Best value for money in the region"}
-                  </p>
+              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0 w-14 h-14 bg-amber-700 rounded-2xl flex items-center justify-center text-white text-2xl">
+                    🚚
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-semibold mb-2 text-amber-800">
+                      {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}
+                    </h3>
+                    <p className="text-gray-600">
+                      {language === "fr"
+                        ? "Livraison rapide et fiable directement chez vous, service professionnel"
+                        : "Fast and reliable delivery directly to your home, professional service"}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="shrink-0 w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white">
-                  ✓
+              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0 w-14 h-14 bg-blue-700 rounded-2xl flex items-center justify-center text-white text-2xl">
+                    💰
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-semibold mb-2 text-blue-800">
+                      {language === "fr"
+                        ? "Prix Compétitifs"
+                        : "Competitive Prices"}
+                    </h3>
+                    <p className="text-gray-600">
+                      {language === "fr"
+                        ? "Meilleur rapport qualité-prix, prix transparents sans surprise"
+                        : "Best value for money, transparent pricing with no surprises"}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {language === "fr" ? "Service Client" : "Customer Service"}
-                  </h3>
-                  <p className="text-gray-600">
-                    {language === "fr"
-                      ? "Équipe dédiée à votre satisfaction"
-                      : "Team dedicated to your satisfaction"}
-                  </p>
+              </div>
+              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0 w-14 h-14 bg-red-700 rounded-2xl flex items-center justify-center text-white text-2xl">
+                    ❤️
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-semibold mb-2 text-red-800">
+                      {language === "fr" ? "Service Client ⭐" : "Customer Service ⭐"}
+                    </h3>
+                    <p className="text-gray-600">
+                      {language === "fr"
+                        ? "Équipe dévouée, conseils personnalisés, satisfaction garantie"
+                        : "Dedicated team, personalized advice, satisfaction guaranteed"}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
