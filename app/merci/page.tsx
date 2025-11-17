@@ -68,9 +68,7 @@ function ThankYouContent() {
             </svg>
           </div>
           <h1 className="text-5xl font-heading font-bold mb-4 text-green-800">
-            {language === "fr"
-              ? "🎉 Commande Reçue !"
-              : "🎉 Order Received!"}
+            {language === "fr" ? "🎉 Commande Reçue !" : "🎉 Order Received!"}
           </h1>
           <p className="text-xl text-gray-600">
             {language === "fr"
