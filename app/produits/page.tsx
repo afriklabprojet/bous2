@@ -282,18 +282,34 @@ export default function ProductsPage() {
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-linear-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-heading font-bold mb-6 text-green-800">
-            {language === "fr" ? "Nos Produits" : "Our Products"}
+        <div className="text-center mb-16 animate-[slide-up_0.6s_ease-out]">
+          <div className="inline-block mb-4 px-6 py-2 bg-green-700 text-white rounded-full text-sm font-bold">
+            🔥 {language === "fr" ? "CATALOGUE COMPLET" : "FULL CATALOG"}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 text-green-800">
+            {language === "fr" ? "Nos Produits Premium" : "Our Premium Products"}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {language === "fr"
-              ? "Bois de chauffage de qualité supérieure, séché et prêt à l'emploi. Livraison rapide dans tout le Saguenay-Lac-Saint-Jean."
-              : "Premium quality firewood, dried and ready to use. Fast delivery throughout Saguenay-Lac-Saint-Jean."}
+              ? "Bois de chauffage 100% naturel, séché avec soin et livré rapidement. Choisissez la qualité pour votre confort 🌲"
+              : "100% natural firewood, carefully dried and delivered quickly. Choose quality for your comfort 🌲"}
           </p>
+          
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-green-200">
+              <span className="text-green-800 font-semibold">✓ {language === "fr" ? "Séché Naturellement" : "Naturally Dried"}</span>
+            </div>
+            <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-amber-200">
+              <span className="text-amber-800 font-semibold">✓ {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}</span>
+            </div>
+            <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-blue-200">
+              <span className="text-blue-800 font-semibold">✓ {language === "fr" ? "Prix Transparents" : "Transparent Prices"}</span>
+            </div>
+          </div>
         </div>
 
         {/* Products Grid */}
@@ -301,10 +317,19 @@ export default function ProductsPage() {
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-2"
+              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-green-400 relative"
             >
+              {/* Premium Badge for top products */}
+              {index < 3 && (
+                <div className="absolute top-4 right-4 z-10 bg-linear-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                  {index === 0 && "🔥 " + (language === "fr" ? "POPULAIRE" : "POPULAR")}
+                  {index === 1 && "⭐ " + (language === "fr" ? "QUALITÉ" : "QUALITY")}
+                  {index === 2 && "💰 " + (language === "fr" ? "VALEUR" : "VALUE")}
+                </div>
+              )}
+
               {/* Product Image */}
-              <div className="relative h-64 bg-gray-100 overflow-hidden">
+              <div className="relative h-64 bg-linear-to-br from-gray-100 to-gray-50 overflow-hidden group-hover:scale-105 transition-transform duration-300">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -312,131 +337,156 @@ export default function ProductsPage() {
                   className="object-cover"
                   priority={index === 0}
                 />
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
               </div>
 
               {/* Product Header */}
               <div className="p-6">
-                <h3 className="text-2xl font-heading font-bold mb-3 text-green-800">
+                <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 group-hover:text-green-900 transition-colors">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {product.description}
                 </p>
 
                 {/* Features List */}
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm">
-                      <span className="mr-2">{feature}</span>
+                    <li key={idx} className="flex items-start text-sm text-gray-700">
+                      <span className="text-green-600 mr-1">✓</span>
+                      <span>{feature.replace(/^[🔥⏱️🌡️✨📏🌲💨🏡⭐🌿💵🌱⏰📅💰✅📦🚀⚡🍁]/g, '')}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Pricing Table */}
-                <div className="bg-green-50 border-2 border-green-200 rounded-xl p-4 space-y-2">
-                  <div className="text-center mb-3">
-                    <p className="text-xs uppercase tracking-wide text-green-700 font-semibold">
-                      {language === "fr" ? "Prix par corde" : "Price per cord"}
+                <div className="bg-linear-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-5 space-y-3 mb-4">
+                  <div className="text-center mb-2">
+                    <p className="text-xs uppercase tracking-wide text-green-700 font-bold">
+                      💵 {language === "fr" ? "TARIFS" : "PRICING"}
                     </p>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-green-200">
-                    <span className="text-gray-700">
+                  <div className="flex justify-between items-center py-3 border-b-2 border-green-200">
+                    <span className="text-gray-700 font-semibold">
                       {language === "fr" ? "1 corde" : "1 cord"}
                     </span>
-                    <span className="text-green-800 font-bold text-lg">
+                    <span className="text-green-800 font-bold text-2xl">
                       {product.pricing.single}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-green-200 bg-green-100/50 px-2 rounded">
-                    <span className="text-gray-700 text-sm">
-                      {language === "fr" ? "3 cordes" : "3 cords"}
-                    </span>
-                    <span className="text-green-800 font-bold">
+                  <div className="flex justify-between items-center py-3 border-b border-green-200 bg-white/60 px-3 rounded-lg">
+                    <div>
+                      <span className="text-gray-700 font-semibold block">
+                        {language === "fr" ? "3 cordes" : "3 cords"}
+                      </span>
+                      <span className="text-xs text-green-600">💰 {language === "fr" ? "Économisez!" : "Save!"}</span>
+                    </div>
+                                        <span className="text-green-800 font-bold text-xl">
                       {product.pricing.bulk3}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-2 bg-amber-100 px-2 rounded">
-                    <span className="text-gray-700 text-sm flex items-center">
-                      {language === "fr" ? "5 cordes" : "5 cords"}
-                      <span className="ml-2 text-xs bg-amber-800 text-white px-2 py-0.5 rounded-full">
-                        {language === "fr" ? "Meilleur prix" : "Best value"}
+                  <div className="flex justify-between items-center py-3 bg-linear-to-r from-amber-100 to-orange-100 px-3 rounded-lg border-2 border-amber-300">
+                    <div>
+                      <span className="text-gray-800 font-bold flex items-center gap-2">
+                        {language === "fr" ? "5 cordes" : "5 cords"}
+                        <span className="text-xs bg-amber-800 text-white px-3 py-1 rounded-full animate-pulse">
+                          ⭐ {language === "fr" ? "MEILLEUR PRIX" : "BEST VALUE"}
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-amber-900 font-bold">
+                    </div>
+                    <span className="text-amber-900 font-bold text-xl">
                       {product.pricing.bulk5}
                     </span>
                   </div>
                 </div>
 
                 {/* Order Button */}
-                <div className="mt-6">
-                  <Link
-                    href="/commande"
-                    className="block w-full bg-amber-800 hover:bg-amber-900 text-white text-center font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  >
-                    {language === "fr"
-                      ? "🛒 Commander ce produit"
-                      : "🛒 Order this product"}
-                  </Link>
-                </div>
+                <Link
+                  href="/commande"
+                  className="block w-full bg-linear-to-r from-amber-700 to-amber-900 hover:from-amber-800 hover:to-amber-950 text-white text-center font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl group-hover:scale-105"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    🛒 {language === "fr" ? "Commander Maintenant" : "Order Now"}
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="bg-linear-to-r from-green-700 to-green-900 rounded-2xl p-12 text-center text-white shadow-2xl">
-          <h2 className="text-3xl font-heading font-bold mb-4">
-            {language === "fr"
-              ? "Prêt à commander votre bois de chauffage ?"
-              : "Ready to order your firewood?"}
-          </h2>
-          <p className="text-xl mb-8 text-white/90">
-            {language === "fr"
-              ? "Livraison rapide • Qualité garantie • Service professionnel"
-              : "Fast delivery • Guaranteed quality • Professional service"}
-          </p>
-          <Link
-            href="/commande"
-            className="inline-block bg-amber-800 hover:bg-amber-900 px-10 py-4 rounded-xl text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-amber-800/50 hover:-translate-y-1"
-          >
-            {language === "fr" ? "Commander maintenant" : "Order now"}
-          </Link>
+        <div className="bg-linear-to-r from-green-700 via-green-800 to-green-900 rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NGgwdjJoNHY0aDJ2LTRoNHYtMkg2ek02IDRWMEG0djRIMHYyaDR2NGgyVjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+          <div className="relative z-10">
+            <div className="inline-block mb-4 px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold">
+              🔥 {language === "fr" ? "COMMANDEZ DÈS MAINTENANT" : "ORDER NOW"}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              {language === "fr"
+                ? "Prêt pour un hiver au chaud ?"
+                : "Ready for a warm winter?"}
+            </h2>
+            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+              {language === "fr"
+                ? "✓ Livraison rapide sous 24-48h • ✓ Qualité garantie • ✓ Paiement sécurisé"
+                : "✓ Fast delivery 24-48h • ✓ Guaranteed quality • ✓ Secure payment"}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/commande"
+                className="inline-flex items-center gap-2 bg-amber-800 hover:bg-amber-900 px-12 py-5 rounded-xl text-xl font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-800/50 hover:scale-105"
+              >
+                🛒 {language === "fr" ? "Commander Maintenant" : "Order Now"}
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/50 px-8 py-5 rounded-xl text-lg font-semibold transition-all duration-300"
+              >
+                📞 {language === "fr" ? "Nous Contacter" : "Contact Us"}
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Additional Info */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-gray-50 rounded-xl">
-            <div className="text-4xl mb-3">📏</div>
-            <h3 className="font-bold text-lg mb-2 text-green-800">
+          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100">
+            <div className="text-5xl mb-4">📏</div>
+            <h3 className="font-bold text-xl mb-3 text-green-800">
               {language === "fr" ? "Unité de Mesure" : "Unit of Measure"}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 leading-relaxed">
               {language === "fr"
-                ? "Vendu à la corde (128 pi³)"
-                : "Sold by the cord (128 ft³)"}
+                ? "Vendu à la corde standard (128 pi³) - Mesure officielle garantie"
+                : "Sold by standard cord (128 ft³) - Official measure guaranteed"}
             </p>
           </div>
-          <div className="text-center p-6 bg-gray-50 rounded-xl">
-            <div className="text-4xl mb-3">💧</div>
-            <h3 className="font-bold text-lg mb-2 text-green-800">
+          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100">
+            <div className="text-5xl mb-4">💧</div>
+            <h3 className="font-bold text-xl mb-3 text-green-800">
               {language === "fr" ? "Taux d'Humidité" : "Moisture Content"}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 leading-relaxed">
               {language === "fr"
-                ? "Séché naturellement ≤ 20%"
-                : "Naturally dried ≤ 20%"}
+                ? "Séché naturellement ≤ 20% - Prêt à brûler immédiatement"
+                : "Naturally dried ≤ 20% - Ready to burn immediately"}
             </p>
           </div>
-          <div className="text-center p-6 bg-gray-50 rounded-xl">
-            <div className="text-4xl mb-3">🚚</div>
-            <h3 className="font-bold text-lg mb-2 text-green-800">
-              {language === "fr" ? "Livraison" : "Delivery"}
+          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-100">
+            <div className="text-5xl mb-4">🚚</div>
+            <h3 className="font-bold text-xl mb-3 text-green-800">
+              {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 leading-relaxed">
               {language === "fr"
-                ? "Zone Saguenay-Lac-Saint-Jean"
-                : "Saguenay-Lac-Saint-Jean area"}
+                ? "Livraison rapide et fiable - Service professionnel garanti"
+                : "Fast and reliable delivery - Professional service guaranteed"}
             </p>
           </div>
         </div>

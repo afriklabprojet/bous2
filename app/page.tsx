@@ -17,7 +17,7 @@ export default function Home() {
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-30 -z-10"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-30 -z-10"></div>
-        
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-[slide-up_0.6s_ease-out]">
             <div className="inline-block mb-4 px-6 py-2 bg-green-700 text-white rounded-full text-sm font-bold">
@@ -47,21 +47,29 @@ export default function Home() {
               </h3>
               <ul className="text-gray-700 mb-6 space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Haute densité énergétique" : "High energy density"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr"
+                    ? "Haute densité énergétique"
+                    : "High energy density"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Chaleur intense" : "Intense heat"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Chaleur intense" : "Intense heat"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Brûle longtemps" : "Long burning"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Brûle longtemps" : "Long burning"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Peu de fumée" : "Low smoke"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Peu de fumée" : "Low smoke"}
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
                 <span className="text-4xl font-bold text-amber-800">160$</span>
-                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+                <span className="text-gray-500 text-sm">
+                  / {language === "fr" ? "corde" : "cord"}
+                </span>
               </div>
               <Link
                 href="/produits"
@@ -82,21 +90,29 @@ export default function Home() {
               </h3>
               <ul className="text-gray-700 mb-6 space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Excellent rapport qualité-prix" : "Excellent value"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr"
+                    ? "Excellent rapport qualité-prix"
+                    : "Excellent value"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Combustion propre" : "Clean burning"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Combustion propre" : "Clean burning"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Peu de résidus" : "Minimal residue"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Peu de résidus" : "Minimal residue"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Facile à allumer" : "Easy to ignite"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Facile à allumer" : "Easy to ignite"}
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
                 <span className="text-4xl font-bold text-blue-800">150$</span>
-                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+                <span className="text-gray-500 text-sm">
+                  / {language === "fr" ? "corde" : "cord"}
+                </span>
               </div>
               <Link
                 href="/produits"
@@ -117,21 +133,27 @@ export default function Home() {
               </h3>
               <ul className="text-gray-700 mb-6 space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Meilleur prix" : "Best price"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Meilleur prix" : "Best price"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Mélange équilibré" : "Balanced mix"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Mélange équilibré" : "Balanced mix"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Bon rendement" : "Good performance"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Bon rendement" : "Good performance"}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span> {language === "fr" ? "Usage quotidien" : "Daily use"}
+                  <span className="text-green-600">✓</span>{" "}
+                  {language === "fr" ? "Usage quotidien" : "Daily use"}
                 </li>
               </ul>
               <div className="flex items-baseline justify-center gap-2 mb-6">
                 <span className="text-4xl font-bold text-green-800">130$</span>
-                <span className="text-gray-500 text-sm">/ {language === "fr" ? "corde" : "cord"}</span>
+                <span className="text-gray-500 text-sm">
+                  / {language === "fr" ? "corde" : "cord"}
+                </span>
               </div>
               <Link
                 href="/produits"
@@ -235,19 +257,29 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-5xl font-bold mb-2">500+</div>
-              <p className="text-green-100">{language === "fr" ? "Clients Satisfaits" : "Happy Customers"}</p>
+              <p className="text-green-100">
+                {language === "fr" ? "Clients Satisfaits" : "Happy Customers"}
+              </p>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">15+</div>
-              <p className="text-green-100">{language === "fr" ? "Années d'Expérience" : "Years Experience"}</p>
+              <p className="text-green-100">
+                {language === "fr" ? "Années d'Expérience" : "Years Experience"}
+              </p>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">100%</div>
-              <p className="text-green-100">{language === "fr" ? "Bois Séché Naturellement" : "Naturally Dried Wood"}</p>
+              <p className="text-green-100">
+                {language === "fr"
+                  ? "Bois Séché Naturellement"
+                  : "Naturally Dried Wood"}
+              </p>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">24h</div>
-              <p className="text-green-100">{language === "fr" ? "Livraison Rapide" : "Fast Delivery"}</p>
+              <p className="text-green-100">
+                {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}
+              </p>
             </div>
           </div>
         </div>
@@ -258,7 +290,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-green-800">
-              {language === "fr" ? "Pourquoi Choisir JSGC?" : "Why Choose JSGC?"}
+              {language === "fr"
+                ? "Pourquoi Choisir JSGC?"
+                : "Why Choose JSGC?"}
             </h2>
             <p className="text-xl text-gray-600 mb-12">
               {language === "fr"
@@ -328,7 +362,9 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-heading font-semibold mb-2 text-red-800">
-                      {language === "fr" ? "Service Client ⭐" : "Customer Service ⭐"}
+                      {language === "fr"
+                        ? "Service Client ⭐"
+                        : "Customer Service ⭐"}
                     </h3>
                     <p className="text-gray-600">
                       {language === "fr"
