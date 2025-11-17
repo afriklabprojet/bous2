@@ -32,7 +32,7 @@ function ProductsContent({ language }: { language: string }) {
   const products = [
     {
       name: language === "fr" ? "Bois d'Érable Premium" : "Premium Maple Wood",
-      image: "/images/maple-wood.svg",
+      image: "/images/maple-wood.jpg",
       description:
         language === "fr"
           ? "Bois dur de première qualité, séché naturellement 18-24 mois. Excellent pouvoir calorifique et combustion longue durée. Idéal pour chauffage principal."
