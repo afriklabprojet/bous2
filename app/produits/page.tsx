@@ -221,7 +221,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Granulés Premium" : "Premium Pellets",
-      image: "/images/pellets-wood.svg",
+      image: "/images/pellets-wood.jpg",
       description:
         language === "fr"
           ? "Granulés de bois 100% naturels, sacs de 40 lb. Combustion propre et efficace pour poêles à granulés. Chaleur constante et automatisée. Palette de 50 sacs."
