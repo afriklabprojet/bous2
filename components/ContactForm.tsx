@@ -44,29 +44,21 @@ export default function ContactForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message:
-            language === "fr"
-              ? "✅ Commande envoyée avec succès! Nous vous contacterons sous peu."
-              : "✅ Order sent successfully! We will contact you shortly.",
+        // Redirect to thank you page with order details
+        const params = new URLSearchParams({
+          name: formData.name,
+          woodType: formData.woodType,
+          quantity: formData.quantity,
+          address: formData.address,
+          city: formData.city,
+          postalCode: formData.postalCode,
+          phone: formData.phone,
+          email: formData.email,
+          paymentMethod: formData.paymentMethod,
+          deliveryDate: formData.deliveryDate,
+          notes: formData.notes,
         });
-        // Reset form
-        setFormData({
-          name: "",
-          address: "",
-          city: "",
-          postalCode: "",
-          woodType: "maple",
-          quantity: "",
-          phone: "",
-          email: "",
-          paymentMethod: "interac",
-          deliveryDate: "",
-          notes: "",
-        });
-        // Scroll to success message
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.location.href = `/merci?${params.toString()}`;
       } else {
         throw new Error(data.error || "Failed to send order");
       }
