@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import { useLanguage } from "@/lib/language-context";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -41,7 +42,14 @@ export default function Home() {
               <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
                 🔥 {language === "fr" ? "POPULAIRE" : "POPULAR"}
               </div>
-              <div className="text-6xl mb-6 text-center">🔥</div>
+              <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/maple-wood.svg"
+                  alt="Érable Premium"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Érable Premium" : "Premium Maple"}
               </h3>
@@ -84,7 +92,14 @@ export default function Home() {
               <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
                 ⭐ {language === "fr" ? "QUALITÉ" : "QUALITY"}
               </div>
-              <div className="text-6xl mb-6 text-center">🪵</div>
+              <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/birch-wood.svg"
+                  alt="Bouleau Blanc"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Bouleau Blanc" : "White Birch"}
               </h3>
@@ -127,7 +142,14 @@ export default function Home() {
               <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
                 💰 {language === "fr" ? "ÉCONOMIQUE" : "VALUE"}
               </div>
-              <div className="text-6xl mb-6 text-center">🌲</div>
+              <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/mixed-wood.svg"
+                  alt="Bois Mélangé"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-2xl font-heading font-bold mb-3 text-green-800 text-center">
                 {language === "fr" ? "Bois Mélangé" : "Mixed Wood"}
               </h3>

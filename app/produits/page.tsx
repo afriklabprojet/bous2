@@ -290,24 +290,34 @@ export default function ProductsPage() {
             🔥 {language === "fr" ? "CATALOGUE COMPLET" : "FULL CATALOG"}
           </div>
           <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 text-green-800">
-            {language === "fr" ? "Nos Produits Premium" : "Our Premium Products"}
+            {language === "fr"
+              ? "Nos Produits Premium"
+              : "Our Premium Products"}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {language === "fr"
               ? "Bois de chauffage 100% naturel, séché avec soin et livré rapidement. Choisissez la qualité pour votre confort 🌲"
               : "100% natural firewood, carefully dried and delivered quickly. Choose quality for your comfort 🌲"}
           </p>
-          
+
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-green-200">
-              <span className="text-green-800 font-semibold">✓ {language === "fr" ? "Séché Naturellement" : "Naturally Dried"}</span>
+              <span className="text-green-800 font-semibold">
+                ✓{" "}
+                {language === "fr" ? "Séché Naturellement" : "Naturally Dried"}
+              </span>
             </div>
             <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-amber-200">
-              <span className="text-amber-800 font-semibold">✓ {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}</span>
+              <span className="text-amber-800 font-semibold">
+                ✓ {language === "fr" ? "Livraison Rapide" : "Fast Delivery"}
+              </span>
             </div>
             <div className="bg-white px-6 py-3 rounded-full shadow-md border-2 border-blue-200">
-              <span className="text-blue-800 font-semibold">✓ {language === "fr" ? "Prix Transparents" : "Transparent Prices"}</span>
+              <span className="text-blue-800 font-semibold">
+                ✓{" "}
+                {language === "fr" ? "Prix Transparents" : "Transparent Prices"}
+              </span>
             </div>
           </div>
         </div>
@@ -322,9 +332,12 @@ export default function ProductsPage() {
               {/* Premium Badge for top products */}
               {index < 3 && (
                 <div className="absolute top-4 right-4 z-10 bg-linear-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                  {index === 0 && "🔥 " + (language === "fr" ? "POPULAIRE" : "POPULAR")}
-                  {index === 1 && "⭐ " + (language === "fr" ? "QUALITÉ" : "QUALITY")}
-                  {index === 2 && "💰 " + (language === "fr" ? "VALEUR" : "VALUE")}
+                  {index === 0 &&
+                    "🔥 " + (language === "fr" ? "POPULAIRE" : "POPULAR")}
+                  {index === 1 &&
+                    "⭐ " + (language === "fr" ? "QUALITÉ" : "QUALITY")}
+                  {index === 2 &&
+                    "💰 " + (language === "fr" ? "VALEUR" : "VALUE")}
                 </div>
               )}
 
@@ -352,9 +365,17 @@ export default function ProductsPage() {
                 {/* Features List */}
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
+                    <li
+                      key={idx}
+                      className="flex items-start text-sm text-gray-700"
+                    >
                       <span className="text-green-600 mr-1">✓</span>
-                      <span>{feature.replace(/^[🔥⏱️🌡️✨📏🌲💨🏡⭐🌿💵🌱⏰📅💰✅📦🚀⚡🍁]/g, '')}</span>
+                      <span>
+                        {feature.replace(
+                          /^[🔥⏱️🌡️✨📏🌲💨🏡⭐🌿💵🌱⏰📅💰✅📦🚀⚡🍁]/g,
+                          ""
+                        )}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -379,9 +400,11 @@ export default function ProductsPage() {
                       <span className="text-gray-700 font-semibold block">
                         {language === "fr" ? "3 cordes" : "3 cords"}
                       </span>
-                      <span className="text-xs text-green-600">💰 {language === "fr" ? "Économisez!" : "Save!"}</span>
+                      <span className="text-xs text-green-600">
+                        💰 {language === "fr" ? "Économisez!" : "Save!"}
+                      </span>
                     </div>
-                                        <span className="text-green-800 font-bold text-xl">
+                    <span className="text-green-800 font-bold text-xl">
                       {product.pricing.bulk3}
                     </span>
                   </div>
@@ -390,7 +413,8 @@ export default function ProductsPage() {
                       <span className="text-gray-800 font-bold flex items-center gap-2">
                         {language === "fr" ? "5 cordes" : "5 cords"}
                         <span className="text-xs bg-amber-800 text-white px-3 py-1 rounded-full animate-pulse">
-                          ⭐ {language === "fr" ? "MEILLEUR PRIX" : "BEST VALUE"}
+                          ⭐{" "}
+                          {language === "fr" ? "MEILLEUR PRIX" : "BEST VALUE"}
                         </span>
                       </span>
                     </div>
@@ -406,9 +430,20 @@ export default function ProductsPage() {
                   className="block w-full bg-linear-to-r from-amber-700 to-amber-900 hover:from-amber-800 hover:to-amber-950 text-white text-center font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl group-hover:scale-105"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    🛒 {language === "fr" ? "Commander Maintenant" : "Order Now"}
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    🛒{" "}
+                    {language === "fr" ? "Commander Maintenant" : "Order Now"}
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
                     </svg>
                   </span>
                 </Link>
@@ -440,8 +475,18 @@ export default function ProductsPage() {
                 className="inline-flex items-center gap-2 bg-amber-800 hover:bg-amber-900 px-12 py-5 rounded-xl text-xl font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-800/50 hover:scale-105"
               >
                 🛒 {language === "fr" ? "Commander Maintenant" : "Order Now"}
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
                 </svg>
               </Link>
               <Link
