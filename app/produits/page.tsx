@@ -370,12 +370,7 @@ export default function ProductsPage() {
                       className="flex items-start text-sm text-gray-700"
                     >
                       <span className="text-green-600 mr-1">✓</span>
-                      <span>
-                        {feature.replace(
-                          /^[🔥⏱️🌡️✨📏🌲💨🏡⭐🌿💵🌱⏰📅💰✅📦🚀⚡🍁]/g,
-                          ""
-                        )}
-                      </span>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
