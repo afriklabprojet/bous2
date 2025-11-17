@@ -139,7 +139,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Bois de Frêne" : "Ash Wood",
-      image: "/images/ash-wood.svg",
+      image: "/images/ash-wood.jpg",
       description:
         language === "fr"
           ? "Bois dur réputé pour brûler même vert. Excellent pour transition automne-hiver. Séchage rapide et chaleur soutenue. Disponibilité selon la saison."
@@ -247,7 +247,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Frêne Blanc" : "White Ash",
-      image: "/images/ash-wood.svg",
+      image: "/images/ash-wood.jpg",
       description:
         language === "fr"
           ? "Frêne blanc de première qualité. Réputé pour brûler même légèrement vert. Allumage ultra-rapide, chaleur intense. Stock limité - commandez tôt."
