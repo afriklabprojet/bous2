@@ -247,7 +247,7 @@ function ProductsContent({ language }: { language: string }) {
     },
     {
       name: language === "fr" ? "Bouleau Jaune (Merisier)" : "Yellow Birch",
-      image: "/images/yellow-birch.svg",
+      image: "/images/yellow-birch.jpg",
       description:
         language === "fr"
           ? "Merisier (bouleau jaune) - arbre emblématique du Québec. Bois noble, odeur caractéristique d'essence de wintergreen. Combustion régulière et chaleur soutenue."
