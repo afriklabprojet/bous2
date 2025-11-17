@@ -134,26 +134,6 @@ export default function Footer() {
                 <span>{t.services.delivery.title}</span>
               </li>
             </ul>
-
-            {/* Payment Badge */}
-            <div className="mt-6 p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-              <p className="text-sm font-semibold text-white flex items-center">
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                💳 Virement Interac
-              </p>
-            </div>
           </div>
         </div>
 
