@@ -38,8 +38,6 @@ function ThankYouContent() {
 
   const paymentMethods: { [key: string]: { fr: string; en: string } } = {
     interac: { fr: "Virement Interac", en: "Interac Transfer" },
-    cash: { fr: "Argent comptant", en: "Cash" },
-    check: { fr: "Chèque", en: "Check" },
   };
 
   const woodTypeName =

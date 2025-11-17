@@ -62,9 +62,7 @@ export interface Translation {
       yellowBirch: string;
     };
     paymentMethods: {
-      cash: string;
       interac: string;
-      check: string;
     };
   };
   footer: {
@@ -138,9 +136,7 @@ export const translations: Record<Language, Translation> = {
         yellowBirch: "Bouleau Jaune - 175$",
       },
       paymentMethods: {
-        cash: "Comptant à la livraison",
         interac: "Virement Interac",
-        check: "Chèque",
       },
     },
     footer: {
@@ -210,9 +206,7 @@ export const translations: Record<Language, Translation> = {
         yellowBirch: "Yellow Birch - $175",
       },
       paymentMethods: {
-        cash: "Cash on Delivery",
         interac: "Interac Transfer",
-        check: "Check",
       },
     },
     footer: {
