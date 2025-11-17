@@ -85,7 +85,7 @@ function ProductsContent({ language }: { language: string }) {
     {
       name:
         language === "fr" ? "Bois Mélangé Économique" : "Economy Mixed Wood",
-      image: "/images/mixed-wood.svg",
+      image: "/images/mixed-wood.jpg",
       description:
         language === "fr"
           ? "Mélange équilibré de bois durs (érable, bouleau, hêtre). Solution économique sans compromis sur la qualité. Parfait pour usage quotidien."
