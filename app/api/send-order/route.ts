@@ -279,7 +279,10 @@ export async function POST(request: Request) {
 
     if (businessError) {
       console.error("Resend error (business):", businessError);
-      return NextResponse.json({ error: businessError.message }, { status: 500 });
+      return NextResponse.json(
+        { error: businessError.message },
+        { status: 500 }
+      );
     }
 
     // Send confirmation email to customer
@@ -390,6 +393,33 @@ export async function POST(request: Request) {
                       )}</p>`
                     : ""
                 }
+              </div>
+
+              <div class="message-box" style="background: #fff3cd; border-left: 4px solid #f57c00;">
+                <h3 style="color: #f57c00; margin-top: 0;">
+                  💳 ${
+                    isEnglish
+                      ? "Payment Instructions"
+                      : "Instructions de Paiement"
+                  }
+                </h3>
+                <p style="margin-bottom: 10px;">
+                  ${
+                    isEnglish
+                      ? "Please send your Interac transfer to:"
+                      : "Veuillez envoyer votre virement Interac à :"
+                  }
+                </p>
+                <p style="font-size: 18px; font-weight: bold; color: #2e7d32; margin: 15px 0;">
+                  📧 contact@jsgc.store
+                </p>
+                <p style="font-size: 14px; color: #666;">
+                  ${
+                    isEnglish
+                      ? "💡 <strong>Important:</strong> Please include your name and order reference in the transfer message."
+                      : "💡 <strong>Important :</strong> Veuillez inclure votre nom et la référence de commande dans le message du virement."
+                  }
+                </p>
               </div>
 
               <div class="message-box">
