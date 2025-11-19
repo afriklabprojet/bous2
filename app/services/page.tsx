@@ -39,8 +39,8 @@ export default function ServicesPage() {
             <span className="text-2xl">🚚</span>
             <p className="text-lg md:text-xl font-bold">
               {language === "fr"
-                ? "Livraison disponible dans la grande région de Québec !"
-                : "Delivery available in the greater Quebec City area!"}
+                ? "Livraison disponible dans la grande région de Québec et à Montréal !"
+                : "Delivery available in the greater Quebec City and Montreal areas!"}
             </p>
             <span className="text-2xl">📍</span>
           </div>
