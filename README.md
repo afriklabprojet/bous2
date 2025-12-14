@@ -19,7 +19,7 @@ JSGC est une entreprise québécoise spécialisée dans :
 - Adresse : 1100 Route 381, Ferland-et-Boilleau (Québec) G0V 1H0
 - NEQ : 1175166686
 - Email : contact@jsgc.store
-- Téléphone : +1 (418) 673-3851
+- Téléphone : +1 581 681 1180
 
 ## 🚀 Technologie
 

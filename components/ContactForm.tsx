@@ -272,7 +272,7 @@ ${
                 id="phone"
                 name="phone"
                 required
-                placeholder="(418) 555-0123"
+                placeholder="+1 581 681 1180"
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent"

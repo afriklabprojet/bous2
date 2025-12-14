@@ -270,7 +270,7 @@ export async function POST(request: Request) {
             <div class="footer">
               <p>Transport et Bois de Chauffage JSGC</p>
               <p>1100 Route 381, Ferland-et-Boilleau (Québec) G0V 1H0</p>
-              <p>📧 contact@jsgc.store | 📞 +1 (418) 673-3851</p>
+              <p>📧 contact@jsgc.store | 📞 +1 581 681 1180</p>
             </div>
           </body>
         </html>
@@ -426,8 +426,8 @@ export async function POST(request: Request) {
                 <p style="margin: 0;">
                   ${
                     isEnglish
-                      ? '💬 <strong>Questions?</strong><br>Contact us at <a href="mailto:contact@jsgc.store">contact@jsgc.store</a> or call <a href="tel:+14186733851">+1 (418) 673-3851</a>'
-                      : '💬 <strong>Des questions?</strong><br>Contactez-nous à <a href="mailto:contact@jsgc.store">contact@jsgc.store</a> ou appelez au <a href="tel:+14186733851">+1 (418) 673-3851</a>'
+                      ? '💬 <strong>Questions?</strong><br>Contact us at <a href="mailto:contact@jsgc.store">contact@jsgc.store</a> or call <a href="tel:+15816811180">+1 581 681 1180</a>'
+                      : '💬 <strong>Des questions?</strong><br>Contactez-nous à <a href="mailto:contact@jsgc.store">contact@jsgc.store</a> ou appelez au <a href="tel:+15816811180">+1 581 681 1180</a>'
                   }
                 </p>
               </div>

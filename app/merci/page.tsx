@@ -311,10 +311,10 @@ function ThankYouContent() {
                     ? "Pour toute question, contactez-nous au "
                     : "For any questions, contact us at "}
                   <a
-                    href="tel:+14185551234"
+                    href="tel:+15816811180"
                     className="font-bold text-green-700 hover:text-green-900"
                   >
-                    (418) 555-1234
+                    +1 581 681 1180
                   </a>
                 </span>
               </li>

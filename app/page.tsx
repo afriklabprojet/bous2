@@ -232,6 +232,139 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-linear-to-b from-green-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-amber-200 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-green-200 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-[slide-up_0.6s_ease-out]">
+            <div className="inline-block mb-4 px-6 py-2 bg-amber-500 text-white rounded-full text-sm font-bold">
+              ⭐{" "}
+              {language === "fr"
+                ? "TÉMOIGNAGES CLIENTS"
+                : "CLIENT TESTIMONIALS"}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-green-800">
+              {language === "fr"
+                ? "Nos clients satisfaits"
+                : "Our satisfied customers"}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {language === "fr"
+                ? "Découvrez les avis authentiques de nos clients de Québec et Montréal"
+                : "Discover authentic reviews from our Quebec City and Montreal customers"}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Témoignage 1 - Québec */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-linear-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  ML
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Marie Leblanc</h4>
+                  <p className="text-gray-600 text-sm">Québec, QC</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-700 italic mb-4">
+                {language === "fr"
+                  ? "\"Excellent service ! Le bois d'érable était parfaitement sec et la livraison très rapide. Mon poêle à bois n'a jamais si bien chauffé. Je recommande à 100% !\""
+                  : '"Excellent service! The maple wood was perfectly dry and delivery was very fast. My wood stove has never heated so well. I recommend 100%!"'}
+              </p>
+              <p className="text-green-600 font-semibold text-sm">
+                {language === "fr"
+                  ? "✓ Bois d'Érable Premium"
+                  : "✓ Premium Maple Wood"}
+              </p>
+            </div>
+
+            {/* Témoignage 2 - Montréal */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-linear-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  PT
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Pierre Tremblay</h4>
+                  <p className="text-gray-600 text-sm">Montréal, QC</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-700 italic mb-4">
+                {language === "fr"
+                  ? '"Prix très compétitif pour du bois mélangé de qualité. Livraison ponctuelle à Montréal. L\'équipe est professionnelle et courtoise. Merci JSGC !"'
+                  : '"Very competitive price for quality mixed wood. On-time delivery in Montreal. The team is professional and courteous. Thank you JSGC!"'}
+              </p>
+              <p className="text-green-600 font-semibold text-sm">
+                {language === "fr"
+                  ? "✓ Bois Mélangé Économique"
+                  : "✓ Economy Mixed Wood"}
+              </p>
+            </div>
+
+            {/* Témoignage 3 - Québec */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-linear-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  SM
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Sophie Martin</h4>
+                  <p className="text-gray-600 text-sm">Lévis, QC</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-700 italic mb-4">
+                {language === "fr"
+                  ? '"Les granulés sont de première qualité ! Combustion propre, peu de cendres. Service client exceptionnel. Je commande chez JSGC depuis 3 ans."'
+                  : '"The pellets are top quality! Clean burning, little ash. Exceptional customer service. I\'ve been ordering from JSGC for 3 years."'}
+              </p>
+              <p className="text-green-600 font-semibold text-sm">
+                {language === "fr" ? "✓ Granulés Premium" : "✓ Premium Pellets"}
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Témoignages */}
+          <div className="text-center bg-linear-to-r from-green-50 to-amber-50 rounded-2xl p-8 border border-green-200">
+            <h3 className="text-2xl font-bold text-green-800 mb-4">
+              {language === "fr"
+                ? "Rejoignez nos clients satisfaits !"
+                : "Join our satisfied customers!"}
+            </h3>
+            <p className="text-gray-700 mb-6">
+              {language === "fr"
+                ? "Commandez dès aujourd'hui et découvrez pourquoi nos clients nous font confiance"
+                : "Order today and discover why our customers trust us"}
+            </p>
+            <Link
+              href="/commande"
+              className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
+            >
+              {language === "fr" ? "🛒 Commander maintenant" : "🛒 Order now"}
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-24 bg-linear-to-b from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

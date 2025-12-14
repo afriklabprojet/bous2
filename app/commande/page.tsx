@@ -223,10 +223,10 @@ export default function OrderPage() {
               </p>
               <div className="space-y-4">
                 <a
-                  href="tel:+14185551234"
+                  href="tel:+15816811180"
                   className="block bg-white text-green-800 px-6 py-4 rounded-xl font-bold text-center hover:bg-green-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                 >
-                  📱 (418) 555-1234
+                  📱 +1 581 681 1180
                 </a>
                 <a
                   href="mailto:contact@jsgc.store"
