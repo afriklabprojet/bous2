@@ -135,7 +135,7 @@ export default function ContactPage() {
                       </h3>
                       <a
                         href="mailto:contact@jsgc.store"
-                        className="text-green-700 hover:text-green-800 font-semibold text-lg hover:underline"
+                        className="text-green-700 hover:text-green-900 font-bold text-xl"
                       >
                         contact@jsgc.store
                       </a>
@@ -165,11 +165,12 @@ export default function ContactPage() {
                       <h3 className="font-bold text-lg text-gray-900 mb-2">
                         {t.contact.phone}
                       </h3>
-                      <p className="text-gray-600">
-                        {language === "fr"
-                          ? "Contactez-nous par courriel"
-                          : "Contact us by email"}
-                      </p>
+                      <a
+                        href="tel:+15816811180"
+                        className="text-green-700 hover:text-green-900 font-bold text-xl"
+                      >
+                        +1 581 681 1180
+                      </a>
                     </div>
                   </div>
                 </div>
